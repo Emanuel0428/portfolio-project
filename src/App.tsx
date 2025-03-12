@@ -14,11 +14,9 @@ function App() {
   return (
     <ThemeProvider>
       <div className="min-h-screen bg-white dark:bg-gray-900 transition-colors duration-300 relative">
-        {/* Partículas en una capa superior */}
         <div className="absolute inset-0 z-0">
           <ParticlesComponent />
         </div>
-        {/* Contenido en una capa superior a las partículas */}
         <div className="relative z-10">
           <Navbar />
           <main>

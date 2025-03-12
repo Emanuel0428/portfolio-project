@@ -84,7 +84,7 @@ export default function Technologies() {
                     className="flex flex-col items-center p-4 rounded-xl
                              bg-white dark:bg-gray-800
                              shadow-lg hover:shadow-xl
-                             transform transition-all duration-300"
+                             transform transition-all duration-300 "
                   >
                     <div className="w-16 h-16 mb-4 p-2 rounded-lg
                                   bg-gray-100 dark:bg-gray-700

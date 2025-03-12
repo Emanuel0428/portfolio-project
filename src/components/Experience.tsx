@@ -15,7 +15,23 @@ export default function Experience() {
       title: 'Junior Frontend Developer',
       company: 'Outside Company',
       period: '2021 - Presente',
-      description: 'Desarrollo de aplicaciones web con React y TypeScript, implementando soluciones de diseño y accesibilidad.',
+      description: 'Desarrollo de aplicaciones web con React, TypeScript y Tailwind. Implementación de soluciones accesibles y optimizadas para SEO. Colaboración en equipos ágiles bajo metodologías Scrum.',
+      icon: Briefcase,
+    },
+    {
+      type: 'work',
+      title: 'Full Stack Developer',
+      company: 'Techno Support',
+      period: '2023 - Presente',
+      description: 'Desarrollo y mantenimiento de plataformas web con React, Node.js y PostgreSQL. Integración de APIs y optimización del backend para mejorar tiempos de respuesta. Gestión de despliegues en entornos cloud.',
+      icon: Briefcase,
+    },
+    {
+      type: 'work',
+      title: 'Full Stack Developer',
+      company: 'Startup Inc.',
+      period: '2024 - Presente',
+      description: 'Desarrollo de interfaces interactivas con Next.js y optimización de rendimiento con técnicas de SSR e ISR. Implementación de autenticación segura con OAuth y JWT.',
       icon: Briefcase,
     },
     {
@@ -23,18 +39,11 @@ export default function Experience() {
       title: 'Ingeniería en Sistemas e Informática',
       company: 'Universidad Pontificia Bolivariana',
       period: '2022 - 2027',
-      description: 'Estudio de fundamentos de programación, algoritmos y estructuras de datos. Implementación de proyectos de software y desarrollo web.',
+      description: 'Formación en estructuras de datos, bases de datos y desarrollo web. Aplicación de conocimientos en proyectos como foros estudiantiles con IA y análisis de datos con Power BI.',
       icon: GraduationCap,
     },
-    {
-      type: 'work',
-      title: 'Full Stack Developer',
-      company: 'Startup Inc.',
-      period: '2024 - presente',
-      description: 'Desarrollo de interfaces de usuario y optimización de rendimiento.',
-      icon: Briefcase,
-    },
   ];
+  
 
   const containerVariants = {
     hidden: { opacity: 0 },

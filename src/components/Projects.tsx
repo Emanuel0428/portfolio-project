@@ -12,33 +12,33 @@ export default function Projects() {
 
   const projects = [
     {
-      title: 'E-commerce Platform',
-      description: 'Plataforma de comercio electrónico con React, Node.js y MongoDB.',
+      title: 'Supermercado Online',	
+      description: 'Plataforma de comercio electrónico, gestión de inventario y domicilios con React, Node.js y SQL Lite.',
       image: 'https://images.unsplash.com/photo-1661956602116-aa6865609028?auto=format&fit=crop&q=80',
-      tech: ['React', 'Node.js', 'MongoDB', 'Tailwind CSS'],
+      tech: ['React', 'Node.js', 'SQLlite', 'Tailwind CSS', 'TypeScript'],
       links: {
-        demo: 'https://demo.com',
-        github: 'https://github.com',
+        demo: 'https://mercados-mipunto-project.vercel.app/',
+        github: 'https://github.com/Emanuel0428/mercados-mipunto-project',
       },
     },
     {
-      title: 'Task Manager',
-      description: 'Aplicación de gestión de tareas con autenticación y tiempo real.',
+      title: 'Outside ',
+      description: 'Plataforma para comercio en línea de vapes y ropa, con autenticación de usuario, sistema de compras, contacto y con mejoras del SEO.',
       image: 'https://images.unsplash.com/photo-1557804506-669a67965ba0?auto=format&fit=crop&q=80',
-      tech: ['React', 'Firebase', 'Tailwind CSS', 'TypeScript'],
+      tech: ['React', 'Node.js','SupaBase', 'Tailwind CSS', 'TypeScript'],
       links: {
-        demo: 'https://demo.com',
-        github: 'https://github.com',
+        demo: 'https://outside-project.vercel.app/',
+        github: 'https://github.com/Emanuel0428/outside-project',
       },
     },
     {
-      title: 'Blog Platform',
-      description: 'Plataforma de blog con CMS headless y generación estática.',
+      title: 'Portfolio Web',
+      description: 'Portafolio web personal con diseño responsive y animaciones con Framer Motion y Tailwind CSS.',
       image: 'https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?auto=format&fit=crop&q=80',
-      tech: ['Next.js', 'Strapi', 'PostgreSQL', 'Tailwind CSS'],
+      tech: ['Next.js', 'TypeScript', 'Framer Motion', 'Tailwind CSS'],
       links: {
         demo: 'https://demo.com',
-        github: 'https://github.com',
+        github: 'https://github.com/Emanuel0428/portfolio-project',
       },
     },
   ];

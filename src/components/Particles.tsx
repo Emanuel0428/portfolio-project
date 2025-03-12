@@ -6,30 +6,26 @@ import { useTheme } from "../context/ThemeContext";
 
 export default function ParticlesComponent() {
   const { theme } = useTheme();
-  const [init, setInit] = useState(false); // Estado para verificar si el motor está inicializado
+  const [init, setInit] = useState(false);
 
-  // Inicializa el motor de tsParticles solo una vez
   useEffect(() => {
     initParticlesEngine(async (engine) => {
-      // Carga el motor Slim
       await loadSlim(engine);
     }).then(() => {
-      setInit(true); // Marca como inicializado
+      setInit(true);
     });
   }, []);
 
-  // Función que se ejecuta cuando las partículas están cargadas
   const particlesLoaded = async (container?: Container): Promise<void> => {
     console.log("Partículas cargadas:", container);
   };
 
-  // Configuración de las partículas usando `useMemo` para evitar recalculaciones innecesarias
   const options: ISourceOptions = useMemo(
     () => ({
       fullScreen: false,
       background: {
         color: {
-          value: "transparent", // Fondo transparente
+          value: "transparent",
         },
       },
       fpsLimit: 120,
@@ -37,33 +33,33 @@ export default function ParticlesComponent() {
         events: {
           onClick: {
             enable: true,
-            mode: "push", // Agrega partículas al hacer clic
+            mode: "push",
           },
           onHover: {
             enable: true,
-            mode: "repulse", // Repulsión de partículas al pasar el ratón
+            mode: "repulse",
           },
           resize: {
-            enable: true, // Habilita la redimensión automática
+            enable: true,
           },
         },
         modes: {
           push: {
-            quantity: 4, // Número de partículas agregadas al hacer clic
+            quantity: 4,
           },
           repulse: {
-            distance: 200, // Distancia de repulsión
-            duration: 0.4, // Duración de la repulsión
+            distance: 200,
+            duration: 0.4,
           },
         },
       },
       particles: {
         color: {
-          value: theme === "dark" ? "#a855f7" : "#7e22ce", // Color dependiendo del tema
+          value: theme === "dark" ? "#a855f7" : "#7e22ce",
         },
         links: {
-          color: theme === "dark" ? "#a855f7" : "#7e22ce", // Color de los enlaces
-          distance: 150, // Distancia entre partículas para formar enlaces
+          color: theme === "dark" ? "#a855f7" : "#7e22ce",
+          distance: 150,
           enable: true,
           opacity: 0.5,
           width: 1,
@@ -72,7 +68,7 @@ export default function ParticlesComponent() {
           direction: "none",
           enable: true,
           outModes: {
-            default: "bounce", // Las partículas rebotan en los bordes
+            default: "bounce",
           },
           random: false,
           speed: 2,
@@ -80,26 +76,25 @@ export default function ParticlesComponent() {
         },
         number: {
           density: {
-            enable: true, // Habilita la densidad
+            enable: true,
           },
-          value: 80, // Número de partículas
+          value: 80,
         },
         opacity: {
           value: 0.5,
         },
         shape: {
-          type: "circle", // Forma de las partículas
+          type: "circle",
         },
         size: {
-          value: { min: 1, max: 5 }, // Tamaño de las partículas
+          value: { min: 1, max: 5 },
         },
       },
-      detectRetina: true, // Mejora la calidad en pantallas Retina
+      detectRetina: true,
     }),
-    [theme] // Dependencia: se recalcula si cambia el tema
+    [theme]
   );
 
-  // Si el motor no está inicializado, no renderizamos nada
   if (!init) return <></>;
 
   return (
@@ -107,7 +102,7 @@ export default function ParticlesComponent() {
       id="tsparticles"
       particlesLoaded={particlesLoaded}
       options={options}
-      className="absolute inset-0 -z-10" // Borde rojo para depuración
+      className="absolute inset-0 -z-10"
     />
   );
 }
