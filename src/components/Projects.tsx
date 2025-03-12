@@ -14,7 +14,7 @@ export default function Projects() {
     {
       title: 'Supermercado Online',	
       description: 'Plataforma de comercio electrónico, gestión de inventario y domicilios con React, Node.js y SQL Lite.',
-      image: 'https://images.unsplash.com/photo-1661956602116-aa6865609028?auto=format&fit=crop&q=80',
+      image: '/public/images/mockup-mi-punto.png?auto=format&fit=crop&q=80',
       tech: ['React', 'Node.js', 'SQLlite', 'Tailwind CSS', 'TypeScript'],
       links: {
         demo: 'https://mercados-mipunto-project.vercel.app/',
@@ -24,7 +24,7 @@ export default function Projects() {
     {
       title: 'Outside ',
       description: 'Plataforma para comercio en línea de vapes y ropa, con autenticación de usuario, sistema de compras, contacto y con mejoras del SEO.',
-      image: 'https://images.unsplash.com/photo-1557804506-669a67965ba0?auto=format&fit=crop&q=80',
+      image: '/public/images/mockup-outside.png?auto=format&fit=crop&q=80',
       tech: ['React', 'Node.js','SupaBase', 'Tailwind CSS', 'TypeScript'],
       links: {
         demo: 'https://outside-project.vercel.app/',
@@ -37,7 +37,7 @@ export default function Projects() {
       image: 'https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?auto=format&fit=crop&q=80',
       tech: ['Next.js', 'TypeScript', 'Framer Motion', 'Tailwind CSS'],
       links: {
-        demo: 'https://demo.com',
+        demo: 'https://portfolio-project-ema-lon-projects.vercel.app/',
         github: 'https://github.com/Emanuel0428/portfolio-project',
       },
     },
