@@ -24,6 +24,9 @@ export default {
       animation: {
         'bounce-slow': 'bounce 3s linear infinite',
       },
+      fontFamily: {
+        sans: ['cursive', 'sans-serif'],
+      },
     },
   },
   plugins: [animations],
