@@ -23,15 +23,7 @@ export default function Experience() {
       title: 'Full Stack Developer',
       company: 'Techno Support',
       period: '2023 - Presente',
-      description: 'Desarrollo y mantenimiento de plataformas web con React, Node.js y PostgreSQL. Integración de APIs y optimización del backend para mejorar tiempos de respuesta. Gestión de despliegues en entornos cloud.',
-      icon: Briefcase,
-    },
-    {
-      type: 'work',
-      title: 'Full Stack Developer',
-      company: 'Startup Inc.',
-      period: '2024 - Presente',
-      description: 'Desarrollo de interfaces interactivas con Next.js y optimización de rendimiento con técnicas de SSR e ISR. Implementación de autenticación segura con OAuth y JWT.',
+      description: 'Desarrollo y mantenimiento de plataformas web con React, Node.js y PostgreSQL. Integración de APIs y optimización del backend para mejorar tiempos de respuesta. Gestión de despliegues en entornos cloud. Implementación de autenticación segura con OAuth y JWT.',
       icon: Briefcase,
     },
     {
@@ -39,7 +31,7 @@ export default function Experience() {
       title: 'Ingeniería en Sistemas e Informática',
       company: 'Universidad Pontificia Bolivariana',
       period: '2022 - 2027',
-      description: 'Formación en estructuras de datos, bases de datos y desarrollo web. Aplicación de conocimientos en proyectos como foros estudiantiles con IA y análisis de datos con Power BI.',
+      description: 'Formación en estructuras de datos, bases de datos y desarrollo web. Aplicación de conocimientos en proyectos como foros estudiantiles con IA y análisis de datos con Power BI. Participación en eventos académicos y hackathons. Enfoque en desarrollo de software y gestión de proyectos, con énfasis en metodologías ágiles.',
       icon: GraduationCap,
     },
   ];
