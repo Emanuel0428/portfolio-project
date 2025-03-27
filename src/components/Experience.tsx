@@ -83,7 +83,7 @@ export default function Experience() {
               >
                 <div className={`flex-1 ${index % 2 === 0 ? 'md:pr-12' : 'md:pl-12'}`}>
                   <motion.div
-                    whileHover={{ scale: 1.02 }}
+                    whileHover={{ scale: 1.02, boxShadow: '0 0 15px rgba(168, 85, 247, 0.5)' }}
                     className="p-6 rounded-xl bg-white dark:bg-gray-800 shadow-lg"
                   >
                     <div className="flex items-center space-x-2 mb-4">

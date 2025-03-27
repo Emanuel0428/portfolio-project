@@ -14,13 +14,25 @@ export function ThemeProvider({ children }: { children: React.ReactNode }) {
 
   useEffect(() => {
     const savedTheme = localStorage.getItem('theme') as Theme;
+    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)');
+    
+    const applyTheme = (newTheme: Theme) => {
+      setTheme(newTheme);
+      localStorage.setItem('theme', newTheme);
+      document.documentElement.classList.toggle('dark', newTheme === 'dark');
+    };
+
     if (savedTheme) {
-      setTheme(savedTheme);
-      document.documentElement.classList.toggle('dark', savedTheme === 'dark');
-    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
-      setTheme('dark');
-      document.documentElement.classList.add('dark');
+      applyTheme(savedTheme);
+    } else if (prefersDark.matches) {
+      applyTheme('dark');
     }
+
+    const handleChange = (e: MediaQueryListEvent) => {
+      applyTheme(e.matches ? 'dark' : 'light');
+    };
+    prefersDark.addEventListener('change', handleChange);
+    return () => prefersDark.removeEventListener('change', handleChange);
   }, []);
 
   const toggleTheme = () => {

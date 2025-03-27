@@ -24,7 +24,7 @@ export default function Footer() {
           </motion.div>
 
           <div className="text-sm text-gray-500 dark:text-gray-400">
-            © {currentYear} Emanuel Londoño. Todos los derechos reservados.
+            © {currentYear} Emanuel Londoño.
           </div>
         </motion.div>
       </div>

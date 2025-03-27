@@ -54,7 +54,7 @@ export default function About() {
           >
             <img
               src="https://images.unsplash.com/photo-1544256718-3bcf237f3974?auto=format&fit=crop&q=80"
-              alt="Profile"
+              alt="Foto de perfil de Emanuel Londoño"
               className="w-full h-full object-cover"
             />
             <div className="absolute inset-0 bg-primary-600/20 dark:bg-primary-900/30" />
@@ -74,8 +74,8 @@ export default function About() {
             className="text-gray-600 dark:text-gray-300 leading-relaxed"
           >
             Soy un desarrollador web apasionado por crear experiencias digitales excepcionales.
-            Me especializo en el desarrollo frontend con React y tengo experiencia en el stack
-            completo de desarrollo web moderno.
+            Me especializo en el desarrollo frontend con React, typescript y tailwind, además tengo experiencia en el stack
+            completo de desarrollo web moderno usando frameworks como express.js.
           </motion.p>
 
           <motion.div

@@ -75,7 +75,7 @@ export default function Technologies() {
               <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-6">
                 {category.category}
               </h3>
-              <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+              <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
                 {category.items.map((tech) => (
                   <motion.div
                     key={tech.name}
@@ -86,14 +86,9 @@ export default function Technologies() {
                              shadow-lg hover:shadow-xl
                              transform transition-all duration-300 "
                   >
-                    <div className="w-16 h-16 mb-4 p-2 rounded-lg
-                                  bg-gray-100 dark:bg-gray-700
-                                  flex items-center justify-center">
-                      <img
-                        src={tech.icon}
-                        alt={tech.name}
-                        className="w-10 h-10 object-contain"
-                      />
+                    <div className="relative group">
+                      <img src={tech.icon} alt={tech.name} className="w-10 h-10 object-contain" />
+                      <span className="absolute bottom-full mb-2 hidden group-hover:block text-xs bg-gray-800 text-white p-1 rounded">{tech.name}</span>
                     </div>
                     <span className="text-gray-900 dark:text-white font-medium">
                       {tech.name}

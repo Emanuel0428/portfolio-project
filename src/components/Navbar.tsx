@@ -10,10 +10,7 @@ export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 20);
-    };
-
+    const handleScroll = () => setIsScrolled(window.scrollY > 20);
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
@@ -22,22 +19,22 @@ export default function Navbar() {
     <motion.nav
       initial={{ y: -100 }}
       animate={{ y: 0 }}
+      transition={{ duration: 0.5 }}
       className={`fixed w-full z-50 transition-all duration-300 ${
         isScrolled
-          ? 'bg-white/80 dark:bg-gray-900/80 backdrop-blur-sm shadow-lg'
-          : 'bg-transparent'
+          ? 'bg-white/90 dark:bg-gray-900/90 backdrop-blur-md shadow-md'
+          : 'bg-transparent shadow-none'
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           <motion.div
             whileHover={{ scale: 1.05 }}
-            className="text-2xl font-bold text-gray-900 dark:text-primary-600"
+            className="text-[clamp(1.5rem,3vw,2rem)] font-bold text-gray-900 dark:text-primary-600"
           >
             Portafolio Personal
           </motion.div>
 
-          {/* Desktop Menu */}
           <div className="hidden md:flex items-center space-x-8">
             {['Inicio', 'Sobre mí', 'Proyectos', 'Tecnologías', 'Contacto'].map((item) => (
               <Link
@@ -45,47 +42,35 @@ export default function Navbar() {
                 to={item.toLowerCase().replace(' ', '-')}
                 smooth={true}
                 duration={500}
-                className="cursor-pointer text-gray-700 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400
-                         transition-colors duration-300"
+                className="cursor-pointer text-gray-700 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400 transition-colors duration-300"
               >
                 {item}
               </Link>
             ))}
-            
             <motion.button
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }}
               onClick={toggleTheme}
-              className="p-2 rounded-full bg-gray-200 dark:bg-gray-800
-                       hover:bg-gray-300 dark:hover:bg-gray-700
-                       transition-colors duration-300"
+              aria-label={`Cambiar a tema ${theme === 'dark' ? 'claro' : 'oscuro'}`}
+              className="shadow-glow hover:shadow-glow-lg p-2 rounded-full bg-gray-200 dark:bg-gray-800 hover:bg-gray-300 dark:hover:bg-gray-700 transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-primary-500"
             >
-              {theme === 'dark' ? (
-                <Sun className="w-5 h-5 text-yellow-500" />
-              ) : (
-                <Moon className="w-5 h-5 text-gray-700" />
-              )}
+              {theme === 'dark' ? <Sun className="w-5 h-5 text-yellow-500" /> : <Moon className="w-5 h-5 text-gray-700" />}
             </motion.button>
           </div>
 
-          {/* Mobile Menu Button */}
           <div className="md:hidden">
             <motion.button
               whileTap={{ scale: 0.9 }}
               onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="p-2"
+              aria-label={isMenuOpen ? 'Cerrar menú' : 'Abrir menú'}
+              className="shadow-glow hover:shadow-glow-lg p-2 focus:outline-none focus:ring-2 focus:ring-primary-500"
             >
-              {isMenuOpen ? (
-                <X className="w-6 h-6 text-gray-900 dark:text-white" />
-              ) : (
-                <Menu className="w-6 h-6 text-gray-900 dark:text-white" />
-              )}
+              {isMenuOpen ? <X className="w-6 h-6 text-gray-900 dark:text-white" /> : <Menu className="w-6 h-6 text-gray-900 dark:text-white" />}
             </motion.button>
           </div>
         </div>
       </div>
 
-      {/* Mobile Menu */}
       <AnimatePresence>
         {isMenuOpen && (
           <motion.div
@@ -101,9 +86,7 @@ export default function Navbar() {
                   to={item.toLowerCase().replace(' ', '-')}
                   smooth={true}
                   duration={500}
-                  className="block px-3 py-2 text-gray-700 dark:text-gray-300
-                           hover:text-primary-600 dark:hover:text-primary-400
-                           transition-colors duration-300"
+                  className="block px-3 py-2 text-gray-700 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400 transition-colors duration-300"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   {item}
