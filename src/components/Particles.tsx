@@ -31,7 +31,7 @@ function ParticlesComponent() {
           resize: { enable: false },
         },
         modes: {
-          push: { quantity: 4 },
+          push: { quantity: 8 },
           repulse: { distance: 200, duration: 0.4 },
         },
       },
@@ -58,7 +58,7 @@ function ParticlesComponent() {
         },
         opacity: { value: 0.3 },
         shape: { type: 'circle' },
-        size: { value: { min: 1, max: 3 } },
+        size: { value: { min: 1, max: 5 } },
       },
       detectRetina: true,
     }),

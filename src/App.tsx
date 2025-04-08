@@ -38,8 +38,8 @@ function App() {
       <Layout>
         <Suspense fallback={<div className="text-center py-10">Cargando...</div>}>
           <Hero />
-          <About />
           <Projects />
+          <About />
           <Technologies />
           <Experience />
           <Contact />

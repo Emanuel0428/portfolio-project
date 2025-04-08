@@ -18,7 +18,16 @@ export default function Projects() {
         github: 'https://github.com/Emanuel0428/mercados-mipunto-project',
       },
     },
-    // ...otros proyectos
+    {
+      title: 'Outside ',
+      description: 'Plataforma para comercio en línea de vapes y ropa, con autenticación de usuario, sistema de compras, contacto y con mejoras del SEO.',
+      image: '/images/mockup-outside.webp?auto=format&fit=crop&q=80',
+      tech: ['React', 'Node.js','SupaBase', 'Tailwind CSS', 'TypeScript'],
+      links: {
+        demo: 'https://outside-project.vercel.app/',
+        github: 'https://github.com/Emanuel0428/outside-project',
+      },
+    },
   ];
 
   const nextProject = () => setCurrentProject((prev) => (prev + 1) % projects.length);
