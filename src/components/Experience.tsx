@@ -1,7 +1,12 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
-import { Briefcase, GraduationCap } from 'lucide-react';
+import { 
+  Calendar, 
+  MapPin, 
+  Code2, 
+  Star
+} from 'lucide-react';
 
 export default function Experience() {
   const [ref, inView] = useInView({
@@ -11,105 +16,168 @@ export default function Experience() {
 
   const experiences = [
     {
-      type: 'work',
-      title: 'Junior Frontend Developer',
-      company: 'Outside Company',
-      period: '2021 - Presente',
-      description: 'Desarrollo de aplicaciones web con React, TypeScript y Tailwind. Implementación de soluciones accesibles y optimizadas para SEO. Colaboración en equipos ágiles bajo metodologías Scrum.',
-      icon: Briefcase,
+      title: 'Desarrollador Full-Stack',
+      company: 'Proyectos Personales',
+      period: '2022 - Presente',
+      location: 'Medellín, Colombia',
+      type: 'Independiente',
+      description: 'Desarrollo de aplicaciones web completas desde el diseño hasta el deployment, enfocándome en tecnologías modernas y mejores prácticas.',
+      achievements: [
+        'Desarrollo de FlowForgeAI - Plataforma de asistencia empresarial con ML',
+        'Outside Project - E-commerce completo con carrito y autenticación',
+        'Mercados Mi Punto - Sistema de gestión para supermercados',
+        'WebApp Restaurante - Aplicación completa para gestión de restaurantes'
+      ],
+      technologies: ['React', 'TypeScript', 'Node.js', 'Python', 'Supabase']
     },
     {
-      type: 'work',
-      title: 'Full Stack Developer',
-      company: 'Techno Support',
+      title: 'Estudiante de Ciencias de la Computación',
+      company: 'Universidad',
       period: '2023 - Presente',
-      description: 'Desarrollo y mantenimiento de plataformas web con React, Node.js y PostgreSQL. Integración de APIs y optimización del backend para mejorar tiempos de respuesta. Gestión de despliegues en entornos cloud. Implementación de autenticación segura con OAuth y JWT.',
-      icon: Briefcase,
-    },
-    {
-      type: 'education',
-      title: 'Ingeniería en Sistemas e Informática',
-      company: 'Universidad Pontificia Bolivariana',
-      period: '2022 - 2027',
-      description: 'Formación en estructuras de datos, bases de datos y desarrollo web. Aplicación de conocimientos en proyectos como foros estudiantiles con IA y análisis de datos con Power BI. Participación en eventos académicos y hackathons. Enfoque en desarrollo de software y gestión de proyectos, con énfasis en metodologías ágiles.',
-      icon: GraduationCap,
-    },
+      location: 'Colombia',
+      type: 'Académico',
+      description: 'Formación académica en fundamentos de programación, algoritmos, estructuras de datos y desarrollo de software.',
+      achievements: [
+        'Estudio de algoritmos y estructuras de datos avanzadas',
+        'Proyectos académicos en Java, C# y Python',
+        'Aprendizaje de metodologías de desarrollo de software',
+        'Participación en proyectos colaborativos'
+      ],
+      technologies: ['Java', 'C#', 'Python', 'Algoritmos', 'Estructuras de Datos']
+    }
   ];
-  
-
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.2,
-      },
-    },
-  };
-
-  const itemVariants = {
-    hidden: { opacity: 0, x: -50 },
-    visible: {
-      opacity: 1,
-      x: 0,
-      transition: { duration: 0.5 },
-    },
-  };
 
   return (
-    <section id="experiencia" className="section-container">
+    <section id="experiencia" className="section-container relative overflow-hidden">
+      {/* Background decorative elements */}
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        <div className="absolute top-1/4 left-1/3 w-80 h-80 rounded-full bg-gradient-to-br from-primary-500/20 to-purple-600/20 blur-3xl" />
+        <div className="absolute -bottom-40 -right-40 w-80 h-80 rounded-full bg-gradient-to-br from-blue-500/20 to-primary-500/20 blur-3xl" />
+      </div>
+
       <motion.div
         ref={ref}
-        initial="hidden"
-        animate={inView ? 'visible' : 'hidden'}
-        variants={containerVariants}
+        initial={{ opacity: 0 }}
+        animate={inView ? { opacity: 1 } : { opacity: 0 }}
+        transition={{ duration: 0.6 }}
+        className="relative z-10"
       >
-        <h2 className="section-title">
-          Mi <span className="gradient-text">Experiencia</span>
-        </h2>
+        {/* Header */}
+        <div className="text-center mb-16">
+          <motion.h2 
+            initial={{ opacity: 0, y: 20 }}
+            animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            className="text-4xl md:text-5xl font-bold mb-4"
+          >
+            Mi <span className="bg-gradient-to-r from-primary-500 via-purple-500 to-pink-500 bg-clip-text text-transparent">Experiencia</span>
+          </motion.h2>
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+            transition={{ duration: 0.6, delay: 0.4 }}
+            className="text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto"
+          >
+            Mi trayectoria en el desarrollo de software
+          </motion.p>
+        </div>
 
-        <div className="relative">
-          <div className="absolute left-1/2 transform -translate-x-px h-full w-0.5
-                        bg-gradient-to-b from-primary-500 to-purple-600" />
+        {/* Timeline */}
+        <div className="max-w-4xl mx-auto space-y-8">
+          {experiences.map((exp, index) => (
+            <motion.div
+              key={index}
+              initial={{ opacity: 0, y: 20 }}
+              animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+              transition={{ duration: 0.6, delay: 0.6 + index * 0.2 }}
+              className="relative"
+            >
+              {/* Timeline line */}
+              {index < experiences.length - 1 && (
+                <div className="absolute left-6 md:left-8 top-16 w-0.5 h-32 bg-gradient-to-b from-primary-500 to-purple-600 opacity-30" />
+              )}
 
-          <div className="space-y-12">
-            {experiences.map((exp, index) => (
-              <motion.div
-                key={index}
-                variants={itemVariants}
-                className={`relative flex items-start ${
-                  index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'
-                }`}
-              >
-                <div className={`flex-1 ${index % 2 === 0 ? 'md:pr-12' : 'md:pl-12'}`}>
-                  <motion.div
-                    whileHover={{ scale: 1.02 }}
-                    className="p-6 rounded-xl bg-white dark:bg-gray-800 shadow-lg"
-                  >
-                    <div className="flex items-center space-x-2 mb-4">
-                      <exp.icon className="w-5 h-5 text-primary-600 dark:text-primary-400" />
-                      <h3 className="text-xl font-semibold text-gray-900 dark:text-white">
-                        {exp.title}
-                      </h3>
-                    </div>
-                    <div className="mb-2">
-                      <span className="text-gray-600 dark:text-gray-300">{exp.company}</span>
-                      <span className="mx-2 text-gray-400">•</span>
-                      <span className="text-primary-600 dark:text-primary-400">{exp.period}</span>
-                    </div>
-                    <p className="text-gray-600 dark:text-gray-300">{exp.description}</p>
-                  </motion.div>
+              <div className="flex flex-col md:flex-row gap-8 items-start">
+                {/* Timeline dot */}
+                <div className="flex-shrink-0 relative">
+                  <div className="w-12 h-12 md:w-16 md:h-16 rounded-full bg-gradient-to-br from-primary-500 to-purple-600 flex items-center justify-center shadow-lg">
+                    <div className="w-6 h-6 md:w-8 md:h-8 rounded-full bg-white dark:bg-gray-900" />
+                  </div>
                 </div>
 
-                <div className="absolute left-1/2 transform -translate-x-1/2
-                              w-8 h-8 rounded-full bg-primary-500
-                              flex items-center justify-center
-                              shadow-lg">
-                  <exp.icon className="w-4 h-4 text-white" />
+                {/* Content */}
+                <div className="flex-1">
+                  <div className="glass-card p-8 rounded-3xl hover:scale-[1.01] transition-all duration-300">
+                    {/* Header */}
+                    <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between mb-6">
+                      <div>
+                        <h3 className="text-xl md:text-2xl font-bold text-gray-900 dark:text-white mb-2">
+                          {exp.title}
+                        </h3>
+                        <p className="text-primary-600 dark:text-primary-400 font-semibold text-lg">
+                          {exp.company}
+                        </p>
+                      </div>
+                      <div className="flex flex-col lg:items-end mt-4 lg:mt-0 space-y-2">
+                        <div className="flex items-center space-x-2 text-gray-600 dark:text-gray-300">
+                          <Calendar className="w-4 h-4" />
+                          <span className="text-sm font-medium">{exp.period}</span>
+                        </div>
+                        <div className="flex items-center space-x-2 text-gray-600 dark:text-gray-300">
+                          <MapPin className="w-4 h-4" />
+                          <span className="text-sm">{exp.location}</span>
+                          <span className="px-2 py-1 text-xs rounded-full bg-primary-100 dark:bg-primary-900/30 text-primary-700 dark:text-primary-300">
+                            {exp.type}
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+
+                    {/* Description */}
+                    <p className="text-gray-600 dark:text-gray-300 mb-6 leading-relaxed">
+                      {exp.description}
+                    </p>
+
+                    {/* Achievements */}
+                    <div className="mb-6">
+                      <h4 className="text-sm font-semibold text-gray-900 dark:text-white mb-3 flex items-center space-x-2">
+                        <Star className="w-4 h-4 text-primary-500" />
+                        <span>Logros destacados:</span>
+                      </h4>
+                      <ul className="space-y-2">
+                        {exp.achievements.map((achievement, achIndex) => (
+                          <li key={achIndex} className="flex items-start space-x-3">
+                            <div className="w-1.5 h-1.5 rounded-full bg-primary-500 mt-2 flex-shrink-0" />
+                            <span className="text-gray-600 dark:text-gray-300 text-sm">
+                              {achievement}
+                            </span>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+
+                    {/* Technologies */}
+                    <div>
+                      <h4 className="text-sm font-semibold text-gray-900 dark:text-white mb-3 flex items-center space-x-2">
+                        <Code2 className="w-4 h-4 text-primary-500" />
+                        <span>Tecnologías utilizadas:</span>
+                      </h4>
+                      <div className="flex flex-wrap gap-2">
+                        {exp.technologies.map((tech, techIndex) => (
+                          <span
+                            key={techIndex}
+                            className="px-3 py-1 text-sm rounded-full bg-primary-100 dark:bg-primary-900/30 text-primary-700 dark:text-primary-300 font-medium"
+                          >
+                            {tech}
+                          </span>
+                        ))}
+                      </div>
+                    </div>
+                  </div>
                 </div>
-              </motion.div>
-            ))}
-          </div>
+              </div>
+            </motion.div>
+          ))}
         </div>
       </motion.div>
     </section>

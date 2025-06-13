@@ -28,19 +28,19 @@ export default function ParticlesComponent() {
           value: "transparent",
         },
       },
-      fpsLimit: 120,
+      fpsLimit: 60,
       interactivity: {
         events: {
           onClick: {
-            enable: true,
+            enable: false,
             mode: "push",
           },
           onHover: {
-            enable: true,
+            enable: false,
             mode: "repulse",
           },
           resize: {
-            enable: true,
+            enable: false,
           },
         },
         modes: {
@@ -78,7 +78,7 @@ export default function ParticlesComponent() {
           density: {
             enable: true,
           },
-          value: 80,
+          value: 20,
         },
         opacity: {
           value: 0.5,
