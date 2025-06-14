@@ -37,15 +37,16 @@ export default function Projects() {
       description: 'Asistente inteligente para negocios que brinda estrategias personalizadas según la información recopilada.',
       fullDescription: 'Una plataforma avanzada de inteligencia artificial diseñada para ayudar a todo tipo de negocios. Utiliza machine learning para analizar datos empresariales y generar estrategias personalizadas que impulsen el crecimiento y la eficiencia operativa.',
       images: [
-        'https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&q=80&w=800&h=600',
-        'https://images.unsplash.com/photo-1555255707-c07966088b7b?auto=format&fit=crop&q=80&w=800&h=600',
-        'https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&q=80&w=800&h=600',
-        'https://images.unsplash.com/photo-1518186285589-2f7649de83e0?auto=format&fit=crop&q=80&w=800&h=600',
-        'https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=800&h=600'
+        'https://i.postimg.cc/sxTwFzJ6/Captura-de-pantalla-2025-06-13-190058.png?auto=format&fit=crop&q=80&w=800&h=600',
+        'https://i.postimg.cc/htzMYHQs/Captura-de-pantalla-2025-06-13-190144.png?auto=format&fit=crop&q=80&w=800&h=600',
+        'https://i.postimg.cc/2jGHLdfQ/Captura-de-pantalla-2025-06-13-190153.png?auto=format&fit=crop&q=80&w=800&h=600',
+        'https://i.postimg.cc/RVbXXMhq/Captura-de-pantalla-2025-06-13-190219.png?auto=format&fit=crop&q=80&w=800&h=600',
+        'https://i.postimg.cc/yYNLmJVw/Captura-de-pantalla-2025-06-13-190228.png?auto=format&fit=crop&q=80&w=800&h=600'
       ],
       tech: ['TypeScript', 'React', 'Node.js', 'AI/ML', 'Business Intelligence'],
       category: 'ai',
       links: {
+        demo: 'https://flowforge-ai.netlify.app/',
         github: 'https://github.com/Emanuel0428/FlowForgeAI',
       },
       features: [
@@ -60,6 +61,34 @@ export default function Projects() {
     },
     {
       id: 2,
+      title: 'All-in-One Fitness App',
+      description: 'Aplicación completa de fitness con tracking de ejercicios, planes personalizados y métricas de progreso.',
+      fullDescription: 'Aplicación integral de fitness desarrollada en colaboración que combina tracking de ejercicios, planes de entrenamiento personalizados, seguimiento nutricional y análisis de progreso. Incluye tanto frontend como backend API.',
+      images: [
+        'https://i.postimg.cc/jdZd11YD/Captura-de-pantalla-2025-06-13-191332.png?auto=format&fit=crop&q=80&w=800&h=600',
+        'https://i.postimg.cc/zGQDzRB5/Captura-de-pantalla-2025-06-13-191441.png?auto=format&fit=crop&q=80&w=800&h=600',
+        'https://i.postimg.cc/Hkns1tTB/Captura-de-pantalla-2025-06-13-191538.png?auto=format&fit=crop&q=80&w=800&h=600',
+        'https://i.postimg.cc/tTQXPQWM/Captura-de-pantalla-2025-06-13-191652.png?auto=format&fit=crop&q=80&w=800&h=600',
+        'https://i.postimg.cc/s2ZjvDQW/Captura-de-pantalla-2025-06-13-191723.png?auto=format&fit=crop&q=80&w=800&h=600'
+      ],
+      tech: ['TypeScript', 'React', 'JavaScript', 'Node.js', 'Express'],
+      category: 'webapp',
+      links: {
+        demo: 'https://www.allinonefitnessapp.online/',
+        github: 'https://github.com/dano796/all-in-one-fitness-app',
+      },
+      features: [
+        'Tracking de ejercicios y rutinas',
+        'Planes de entrenamiento personalizados',
+        'Seguimiento nutricional',
+        'Métricas de progreso avanzadas',
+        'API backend robusta',
+        'Sincronización en tiempo real'
+      ],
+      status: 'completed'
+    },
+    {
+      id: 3,
       title: 'Outside Project',
       description: 'E-commerce moderno para la marca Outside, especializada en vapes y ropa urbana.',
       fullDescription: 'Plataforma de comercio electrónico completa para la marca Outside, diseñada con un enfoque moderno y urbano. Incluye gestión de productos, carrito de compras, autenticación de usuarios y panel administrativo para la gestión del inventario.',
@@ -87,16 +116,16 @@ export default function Projects() {
       status: 'completed'
     },
     {
-      id: 3,
+      id: 4,
       title: 'Mercados Mi Punto',
       description: 'Aplicación web de e-commerce para productos frescos de alta calidad con funcionalidades avanzadas.',
       fullDescription: 'Una plataforma completa de comercio electrónico especializada en productos frescos. Incluye un sistema robusto de gestión de inventario, autenticación JWT, carrito persistente y un panel administrativo para la gestión completa del negocio.',
       images: [
-        'https://images.unsplash.com/photo-1542838132-92c53300491e?auto=format&fit=crop&q=80&w=800&h=600',
-        'https://images.unsplash.com/photo-1488459716781-31db52582fe9?auto=format&fit=crop&q=80&w=800&h=600',
-        'https://images.unsplash.com/photo-1506976785307-8732e854ad03?auto=format&fit=crop&q=80&w=800&h=600',
-        'https://images.unsplash.com/photo-1563636619-e9143da7973b?auto=format&fit=crop&q=80&w=800&h=600',
-        'https://images.unsplash.com/photo-1578662996442-48f60103fc96?auto=format&fit=crop&q=80&w=800&h=600'
+        'https://i.postimg.cc/SKX0DTmb/Captura-de-pantalla-2025-06-13-184721.png?auto=format&fit=crop&q=80&w=800&h=600',
+        'https://i.postimg.cc/C5gWMwkw/Captura-de-pantalla-2025-06-13-184755.png?auto=format&fit=crop&q=80&w=800&h=600',
+        'https://i.postimg.cc/ZnxXCXxp/Captura-de-pantalla-2025-06-13-184806.png?auto=format&fit=crop&q=80&w=800&h=600',
+        'https://i.postimg.cc/Gp6WNFp8/Captura-de-pantalla-2025-06-13-185102.png?auto=format&fit=crop&q=80&w=800&h=600',
+        'https://i.postimg.cc/nz7ytXsd/Captura-de-pantalla-2025-06-13-185115.png?auto=format&fit=crop&q=80&w=800&h=600'
       ],
       tech: ['TypeScript', 'React', 'Node.js', 'SQLite', 'Express', 'JWT', 'Zustand'],
       category: 'ecommerce',
@@ -115,7 +144,7 @@ export default function Projects() {
       status: 'completed'
     },
     {
-      id: 4,
+      id: 5,
       title: 'WebApp Restaurante',
       description: 'Aplicación web moderna para gestión de restaurantes con funcionalidades de reservas y menús.',
       fullDescription: 'Sistema integral para la gestión de restaurantes que incluye manejo de menús digitales, sistema de reservas, gestión de mesas y análisis de ventas. Diseñado para optimizar la experiencia tanto del cliente como del personal del restaurante.',
@@ -140,33 +169,6 @@ export default function Projects() {
         'Integración con sistemas de pago'
       ],
       status: 'in-progress'
-    },
-    {
-      id: 5,
-      title: 'All-in-One Fitness App',
-      description: 'Aplicación completa de fitness con tracking de ejercicios, planes personalizados y métricas de progreso.',
-      fullDescription: 'Aplicación integral de fitness desarrollada en colaboración que combina tracking de ejercicios, planes de entrenamiento personalizados, seguimiento nutricional y análisis de progreso. Incluye tanto frontend como backend API.',
-      images: [
-        'https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?auto=format&fit=crop&q=80&w=800&h=600',
-        'https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&q=80&w=800&h=600',
-        'https://images.unsplash.com/photo-1549060279-7e168fcee0c2?auto=format&fit=crop&q=80&w=800&h=600',
-        'https://images.unsplash.com/photo-1605296867304-46d5465a13f1?auto=format&fit=crop&q=80&w=800&h=600',
-        'https://images.unsplash.com/photo-1583500178690-f7d24219f8d2?auto=format&fit=crop&q=80&w=800&h=600'
-      ],
-      tech: ['TypeScript', 'React', 'JavaScript', 'Node.js', 'Express'],
-      category: 'webapp',
-      links: {
-        github: 'https://github.com/Emanuel0428/all-in-one-fitness-app',
-      },
-      features: [
-        'Tracking de ejercicios y rutinas',
-        'Planes de entrenamiento personalizados',
-        'Seguimiento nutricional',
-        'Métricas de progreso avanzadas',
-        'API backend robusta',
-        'Sincronización en tiempo real'
-      ],
-      status: 'completed'
     },
     {
       id: 6,
@@ -197,55 +199,55 @@ export default function Projects() {
     },
     {
       id: 7,
-      title: 'TaskMaster Pro',
-      description: 'Aplicación avanzada de gestión de tareas con colaboración en tiempo real y análisis de productividad.',
-      fullDescription: 'Sistema completo de gestión de proyectos y tareas diseñado para equipos de trabajo. Incluye colaboración en tiempo real, seguimiento de tiempo, reportes de productividad y integración con herramientas populares.',
+      title: 'Generador de Ideas de Videos',
+      description: 'Sistema de IA avanzado para creación de contenido viral usando web scraping de tendencias y análisis predictivo.',
+      fullDescription: 'Un sistema completamente automatizado que genera ideas de videos optimizadas para diferentes redes sociales usando Inteligencia Artificial, web scraping de tendencias reales y análisis predictivo de viralidad. Utiliza Gemini 2.0 Flash para generar contenido de alta calidad con múltiples tipos de contenido por red social.',
       images: [
-        'https://images.unsplash.com/photo-1611224923853-80b023f02d71?auto=format&fit=crop&q=80&w=800&h=600',
-        'https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?auto=format&fit=crop&q=80&w=800&h=600',
-        'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&q=80&w=800&h=600',
-        'https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&q=80&w=800&h=600',
-        'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=800&h=600'
+        'https://images.unsplash.com/photo-1611162617474-5b21e879e113?auto=format&fit=crop&q=80&w=800&h=600',
+        'https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=800&h=600',
+        'https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=800&h=600',
+        'https://images.unsplash.com/photo-1563013544-824ae1b704d3?auto=format&fit=crop&q=80&w=800&h=600',
+        'https://images.unsplash.com/photo-1542744173-8e7e53415bb0?auto=format&fit=crop&q=80&w=800&h=600'
       ],
-      tech: ['React', 'TypeScript', 'Socket.io', 'MongoDB', 'Express'],
-      category: 'webapp',
+      tech: ['Python', 'Gemini AI', 'Web Scraping', 'Pandas', 'OpenPyXL'],
+      category: 'ai',
       links: {
-        github: 'https://github.com/Emanuel0428/taskmaster-pro',
+        github: 'https://github.com/Emanuel0428/Generador-Ideas-Videos',
       },
       features: [
-        'Colaboración en tiempo real',
-        'Gestión de proyectos y sprints',
-        'Seguimiento de tiempo automático',
-        'Reportes de productividad',
-        'Notificaciones push',
-        'Integración con Slack y Discord'
+        'Generación inteligente con Gemini 2.0 Flash',
+        'Web scraping de tendencias en tiempo real',
+        'Optimización por red social (TikTok, YouTube, Instagram)',
+        'Análisis predictivo de viralidad (score 70-95)',
+        'Exportación profesional a Excel con 4 hojas',
+        'Sistema de puntuación automático de calidad'
       ],
-      status: 'in-progress'
+      status: 'completed'
     },
     {
       id: 8,
-      title: 'SmartFinance Dashboard',
-      description: 'Dashboard inteligente para gestión financiera personal con análisis predictivo y recomendaciones automáticas.',
-      fullDescription: 'Plataforma avanzada de gestión financiera que utiliza inteligencia artificial para analizar patrones de gasto, predecir tendencias financieras y ofrecer recomendaciones personalizadas para el ahorro e inversión.',
+      title: 'Match Cut Generator',
+      description: 'Generador de videos con efectos de texto dinámicos y transiciones suaves usando múltiples proveedores de IA.',
+      fullDescription: 'Un generador avanzado de videos con efectos de texto dinámicos, enfocado en crear transiciones suaves y efectos visuales atractivos. Incluye interfaz web intuitiva, efectos visuales avanzados como desenfoque radial y gaussiano, texturas de fondo predefinidas y soporte para múltiples proveedores de IA como Mistral, Google Gemini, Anthropic Claude y DeepSeek.',
       images: [
-        'https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=800&h=600',
-        'https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&q=80&w=800&h=600',
-        'https://images.unsplash.com/photo-1563013544-824ae1b704d3?auto=format&fit=crop&q=80&w=800&h=600',
+        'https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?auto=format&fit=crop&q=80&w=800&h=600',
+        'https://images.unsplash.com/photo-1611162617474-5b21e879e113?auto=format&fit=crop&q=80&w=800&h=600',
+        'https://images.unsplash.com/photo-1536240478700-b869070f9279?auto=format&fit=crop&q=80&w=800&h=600',
         'https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=800&h=600',
         'https://images.unsplash.com/photo-1542744173-8e7e53415bb0?auto=format&fit=crop&q=80&w=800&h=600'
       ],
-      tech: ['Vue.js', 'Python', 'TensorFlow', 'PostgreSQL', 'Chart.js'],
+      tech: ['Python', 'Flask', 'FFmpeg', 'HTML/CSS', 'Multiple AI APIs'],
       category: 'ai',
       links: {
-        github: 'https://github.com/Emanuel0428/smartfinance-dashboard',
+        github: 'https://github.com/Emanuel0428/Match_cut',
       },
       features: [
-        'Análisis predictivo de gastos',
-        'Recomendaciones de ahorro personalizadas',
-        'Conectividad con bancos (Open Banking)',
-        'Categorización automática de transacciones',
-        'Alertas inteligentes de presupuesto',
-        'Visualizaciones interactivas avanzadas'
+        'Interfaz web intuitiva con diseño moderno',
+        'Efectos visuales avanzados (desenfoque radial y gaussiano)',
+        'Múltiples proveedores de IA (Mistral, Gemini, Claude, DeepSeek)',
+        'Texturas de fondo predefinidas y colores personalizables',
+        'Dimensiones de video y FPS ajustables',
+        'Sistema robusto de manejo de errores'
       ],
       status: 'completed'
     },
