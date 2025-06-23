@@ -8,22 +8,21 @@ export default function About() {
     triggerOnce: true,
     threshold: 0.1,
   });
-
   const values = [
     {
       icon: Code2,
-      title: 'Código Limpio',
-      description: 'Escribo código mantenible y escalable siguiendo las mejores prácticas.'
+      title: 'Excelencia Técnica',
+      description: 'Desarrollo código limpio, escalable y mantenible aplicando principios SOLID y mejores prácticas de la industria.'
     },
     {
       icon: Users,
-      title: 'Colaboración',
-      description: 'Trabajo efectivamente en equipo y contribuyo a proyectos open source.'
+      title: 'Trabajo Colaborativo',
+      description: 'Experiencia en equipos multidisciplinarios, metodologías ágiles y contribución activa a proyectos open source.'
     },
     {
       icon: GraduationCap,
-      title: 'Aprendizaje Continuo',
-      description: 'Siempre explorando nuevas tecnologías y metodologías de desarrollo.'
+      title: 'Innovación Constante',
+      description: 'Combinando conocimientos académicos sólidos con exploración de tecnologías emergentes como IA y ML.'
     }
   ];
 
@@ -73,23 +72,27 @@ export default function About() {
             <div className="flex items-center space-x-3 mb-6">
               <GraduationCap className="w-8 h-8 text-primary-500" />
               <h3 className="text-2xl font-bold text-gray-900 dark:text-white">Mi Historia</h3>
-            </div>
-            
-            <div className="space-y-4 text-gray-600 dark:text-gray-300 leading-relaxed">
+            </div>              <div className="space-y-4 text-gray-600 dark:text-gray-300 leading-relaxed">
               <p>
-                Soy <strong>Emanuel Londoño</strong>, estudiante de Ciencias de la Computación en Colombia
-                con una profunda pasión por el desarrollo de software y la tecnología.
+                Soy <strong>Emanuel Londoño</strong>, estudiante de 6to semestre de Ingeniería en Sistemas e Informática 
+                en la <strong>Universidad Pontificia Bolivariana</strong> de Medellín. Mi pasión por la tecnología 
+                me impulsa a crear soluciones innovadoras con impacto real.
               </p>
               <p>
-                Mi viaje en la programación comenzó con curiosidad por entender cómo funcionan las 
-                aplicaciones web, y desde entonces he desarrollado experiencia en 
-                desarrollo full-stack, con especial interés en React, TypeScript y tecnologías de IA.
+                Mi trayectoria comenzó con curiosidad por entender cómo funcionan las aplicaciones diarias. 
+                Desde entonces, he evolucionado hacia el desarrollo full-stack, especializándome en 
+                <strong>React, TypeScript, Node.js y Python</strong>, con creciente interés en IA y machine learning.
               </p>
               <p>
-                A través de mis repositorios en GitHub, he explorado diversas 
-                tecnologías desde e-commerce hasta inteligencia artificial, siempre buscando crear 
-                soluciones innovadoras como <strong>FlowForgeAI</strong>, mi plataforma de 
-                asistencia empresarial basada en ML.
+                Durante mi formación, he combinado fundamentos teóricos con proyectos prácticos, 
+                desarrollando desde <strong>sistemas de e-commerce completos</strong> hasta plataformas de 
+                inteligencia artificial como <strong>FlowForgeAI</strong>. Mi enfoque busca siempre 
+                excelencia técnica e innovación.
+              </p>
+              <p>
+                Actualmente exploro las fronteras entre desarrollo web moderno e inteligencia artificial, 
+                integrando <strong>machine learning</strong> con interfaces intuitivas y experiencias 
+                digitales excepcionales.
               </p>
             </div>
           </motion.div>

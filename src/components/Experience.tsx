@@ -31,19 +31,24 @@ export default function Experience() {
       technologies: ['React', 'TypeScript', 'Node.js', 'Python', 'Supabase']
     },
     {
-      title: 'Estudiante de Ciencias de la Computación',
-      company: 'Universidad',
+      title: 'Estudiante de Ingeniería de Sistemas e Informática',
+      company: 'Universidad Pontificia Bolivariana',
       period: '2023 - Presente',
-      location: 'Colombia',
-      type: 'Académico',
-      description: 'Formación académica en fundamentos de programación, algoritmos, estructuras de datos y desarrollo de software.',
+      location: 'Colombia',      type: 'Académico',
+      description: 'Formación académica integral en Ingeniería de Sistemas e Informática. Actualmente cursando 6to semestre con sólidos conocimientos en programación, matemáticas aplicadas, bases de datos, arquitectura de computadores y desarrollo de software.',
       achievements: [
-        'Estudio de algoritmos y estructuras de datos avanzadas',
-        'Proyectos académicos en Java, C# y Python',
-        'Aprendizaje de metodologías de desarrollo de software',
-        'Participación en proyectos colaborativos'
+        'Dominio avanzado de algoritmos y estructuras de datos complejas',
+        'Desarrollo de aplicaciones con bases de datos relacionales y NoSQL',
+        'Implementación de arquitecturas de software escalables',
+        'Modelamiento matemático y análisis de sistemas computacionales',
+        'Desarrollo de aplicaciones móviles nativas e híbridas',
+        'Gestión de proyectos de software con metodologías ágiles',
+        'Análisis y diseño de sistemas de información empresariales',
+        'Implementación de soluciones de inteligencia artificial básica',
+        'Desarrollo de sistemas operativos y programación de bajo nivel',
+        'Proyectos colaborativos interdisciplinarios con equipos multifuncionales'
       ],
-      technologies: ['Java', 'C#', 'Python', 'Algoritmos', 'Estructuras de Datos']
+      technologies: ['Java', 'C#', 'Python', 'JavaScript', 'SQL', 'MongoDB', 'Android Studio', 'Machine Learning', 'Arquitectura de Software', 'Metodologías Ágiles']
     }
   ];
 

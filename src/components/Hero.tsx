@@ -78,7 +78,7 @@ export default function Hero() {
           transition={{ duration: 0.6, delay: 0.6 }}
           className="text-lg md:text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto mb-12 leading-relaxed"
         >
-          Estudiante de Ciencias de la Computación apasionado por crear 
+          Estudiante de Ingeniería en Sistemas e Informática apasionado por crear 
           soluciones tecnológicas innovadoras con foco en desarrollo full-stack 
           e inteligencia artificial.
         </motion.p>
