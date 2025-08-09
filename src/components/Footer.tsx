@@ -64,12 +64,12 @@ export default function Footer() {
                   <Sparkles className="w-4 h-4 text-primary-400" />
                 </motion.div>
               </div>
-              <div className="text-left">
+              <div className="text-center">
                 <div className="text-xl font-bold bg-gradient-to-r from-gray-900 via-primary-600 to-purple-600 dark:from-white dark:via-primary-400 dark:to-purple-400 bg-clip-text text-transparent">
                   Emanuel Londoño
                 </div>
                 <div className="text-sm text-gray-600 dark:text-gray-300">
-                  Frontend Developer
+                  Full-Stack Dev
                 </div>
               </div>
             </motion.div>

@@ -162,37 +162,6 @@ export default function Contact() {
                 ))}
               </div>
             </div>
-
-            {/* Social Links */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
-              transition={{ duration: 0.6, delay: 1.2 }}
-              className="glass-card p-8 rounded-3xl"
-            >
-              <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-6">
-                Sígueme en redes
-              </h3>
-              <div className="grid grid-cols-2 gap-4">
-                {socialLinks.map((social, index) => (
-                  <motion.a
-                    key={social.label}
-                    href={social.href}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    initial={{ opacity: 0, scale: 0.8 }}
-                    animate={inView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.8 }}
-                    transition={{ duration: 0.5, delay: 1.4 + index * 0.1 }}
-                    whileHover={{ scale: 1.05, y: -2 }}
-                    whileTap={{ scale: 0.95 }}
-                    className={`flex items-center space-x-3 p-4 rounded-xl bg-gradient-to-r ${social.color} text-white shadow-lg ${social.hoverColor} hover:shadow-xl transition-all duration-300`}
-                  >
-                    <social.icon className="w-5 h-5" />
-                    <span className="font-medium text-sm">{social.label}</span>
-                  </motion.a>
-                ))}
-              </div>
-            </motion.div>
           </motion.div>
 
           {/* Contact Form */}

@@ -81,13 +81,12 @@ export default function About() {
               <p>
                 Mi trayectoria comenzó con curiosidad por entender cómo funcionan las aplicaciones diarias. 
                 Desde entonces, he evolucionado hacia el desarrollo full-stack, especializándome en 
-                <strong>React, TypeScript, Node.js y Python</strong>, con creciente interés en IA y machine learning.
+                <strong> React, TypeScript, Node.js y Python</strong>, con creciente interés en IA y machine learning.
               </p>
               <p>
                 Durante mi formación, he combinado fundamentos teóricos con proyectos prácticos, 
                 desarrollando desde <strong>sistemas de e-commerce completos</strong> hasta plataformas de 
-                inteligencia artificial como <strong>FlowForgeAI</strong>. Mi enfoque busca siempre 
-                excelencia técnica e innovación.
+                inteligencia artificial como <strong>FlowForgeAI</strong>.
               </p>
               <p>
                 Actualmente exploro las fronteras entre desarrollo web moderno e inteligencia artificial, 

@@ -26,7 +26,8 @@ export default function Experience() {
         'Desarrollo de FlowForgeAI - Plataforma de asistencia empresarial con ML',
         'Outside Project - E-commerce completo con carrito y autenticación',
         'Mercados Mi Punto - Sistema de gestión para supermercados',
-        'WebApp Restaurante - Aplicación completa para gestión de restaurantes'
+        'WebApp Restaurante - Aplicación completa para gestión de restaurantes',
+        'All in One Fitness App - Aplicación integral para seguimiento de fitness'
       ],
       technologies: ['React', 'TypeScript', 'Node.js', 'Python', 'Supabase']
     },
@@ -39,7 +40,10 @@ export default function Experience() {
       achievements: [
         'Dominio avanzado de algoritmos y estructuras de datos complejas',
         'Desarrollo de aplicaciones con bases de datos relacionales y NoSQL',
-        'Implementación de arquitecturas de software escalables',
+        'Implementación de arquitecturas de software escalables y mantenibles',
+        'Diseño de patrones arquitectónicos: MVC, MVP, MVVM y Clean Architecture',
+        'Desarrollo de microservicios y arquitecturas distribuidas',
+        'Implementación de principios SOLID y patrones de diseño',
         'Modelamiento matemático y análisis de sistemas computacionales',
         'Desarrollo de aplicaciones móviles nativas e híbridas',
         'Gestión de proyectos de software con metodologías ágiles',
@@ -48,7 +52,7 @@ export default function Experience() {
         'Desarrollo de sistemas operativos y programación de bajo nivel',
         'Proyectos colaborativos interdisciplinarios con equipos multifuncionales'
       ],
-      technologies: ['Java', 'C#', 'Python', 'JavaScript', 'SQL', 'MongoDB', 'Android Studio', 'Machine Learning', 'Arquitectura de Software', 'Metodologías Ágiles']
+      technologies: ['Java', 'C#', 'Python', 'JavaScript', 'SQL', 'MongoDB', 'Android Studio', 'Machine Learning', 'Arquitectura de Software', 'Patrones de Diseño', 'Microservicios', 'Clean Architecture', 'Metodologías Ágiles']
     }
   ];
 

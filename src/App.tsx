@@ -29,9 +29,9 @@ function App() {
   return (
     <ThemeProvider>
       <Helmet>
-        <title>Emanuel Londoño | Desarrollador Web</title>
+        <title>ELO | Portfolio</title>
         <meta name="description" content="Portafolio personal de Emanuel Londoño, especializado en React, TypeScript y Tailwind CSS." />
-        <meta property="og:title" content="Emanuel Londoño - Portafolio" />
+        <meta property="og:title" content="ELO - Portafolio" />
         <meta property="og:description" content="Explora mis proyectos y habilidades como desarrollador web." />
         <meta property="og:image" content="/images/og-image.webp" />
       </Helmet>

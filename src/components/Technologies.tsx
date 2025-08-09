@@ -82,9 +82,6 @@ const TechIcon = ({ name, className = "w-8 h-8" }: { name: string; className?: s
         <path d="M21.362 9.354H12V.396a.396.396 0 0 0-.716-.233L2.203 12.424l-.401.562a1.04 1.04 0 0 0 .836 1.659H12v8.959a.396.396 0 0 0 .716.233l9.081-12.261.401-.562a1.04 1.04 0 0 0-.836-1.66z"/>
       </svg>
     ),
-    'Zustand': (
-      <div className={`${className} bg-current rounded`} style={{ clipPath: 'polygon(0 0, 100% 0, 50% 100%)' }} />
-    ),
     'Machine Learning': (
       <svg className={className} viewBox="0 0 24 24" fill="currentColor">
         <path d="M12 0L9.5 8.5 1 6l7.5 2.5L12 0zm0 24l2.5-8.5L23 18l-7.5-2.5L12 24zm-6-6L0 12l6-6-1.5 6L6 18zm12 0L24 12l-6-6 1.5 6L18 18z"/>
@@ -212,7 +209,6 @@ export default function Technologies() {
       description: 'Sistema de gestión de base de datos avanzado',
       projects: ['WebApp Restaurante']
     },
-
     // Tools & Services
     {
       name: 'Git',
@@ -221,14 +217,6 @@ export default function Technologies() {
       color: 'from-orange-500 to-red-600',
       description: 'Control de versiones para gestión de código',
       projects: ['Todos los proyectos']
-    },
-    {
-      name: 'Zustand',
-      category: 'tools',
-      level: 80,
-      color: 'from-purple-400 to-purple-600',
-      description: 'Gestión de estado pequeña y escalable',
-      projects: ['Mercados Mi Punto']
     },
     {
       name: 'Supabase',

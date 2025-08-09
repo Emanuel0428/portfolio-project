@@ -57,7 +57,7 @@ export default function Projects() {
         'Reportes automatizados',
         'Interfaz intuitiva para usuarios no técnicos'
       ],
-      status: 'in-progress'
+      status: 'completed'
     },
     {
       id: 2,
@@ -85,7 +85,7 @@ export default function Projects() {
         'API backend robusta',
         'Sincronización en tiempo real'
       ],
-      status: 'completed'
+      status: 'in-progress'
     },
     {
       id: 3,
@@ -168,7 +168,7 @@ export default function Projects() {
         'Notificaciones en tiempo real',
         'Integración con sistemas de pago'
       ],
-      status: 'in-progress'
+      status: 'completed'
     },
     {
       id: 6,
@@ -250,7 +250,7 @@ export default function Projects() {
         'Sistema robusto de manejo de errores'
       ],
       status: 'completed'
-    },
+    },/*
     {
       id: 9,
       title: 'EcoTrack Marketplace',
@@ -358,7 +358,7 @@ export default function Projects() {
         'API para desarrolladores'
       ],
       status: 'completed'
-    }
+    }*/
   ];
 
   const filters = [
@@ -480,7 +480,7 @@ export default function Projects() {
           transition={{ duration: 0.6, delay: 0.4 }}
           className="text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto"
         >
-          Una colección de 12 proyectos que demuestran mi experiencia en desarrollo full-stack
+          Una colección de proyectos que demuestran mi experiencia en desarrollo full-stack
         </motion.p>
       </motion.div>
 
