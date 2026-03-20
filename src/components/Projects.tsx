@@ -61,7 +61,7 @@ export default function Projects() {
     },
     {
       id: 2,
-      title: 'All-in-One Fitness App',
+      title: 'All-in-One Fitness App V.1',
       description: 'Aplicación completa de fitness con tracking de ejercicios, planes personalizados y métricas de progreso.',
       fullDescription: 'Aplicación integral de fitness desarrollada en colaboración que combina tracking de ejercicios, planes de entrenamiento personalizados, seguimiento nutricional y análisis de progreso. Incluye tanto frontend como backend API.',
       images: [
@@ -85,7 +85,7 @@ export default function Projects() {
         'API backend robusta',
         'Sincronización en tiempo real'
       ],
-      status: 'in-progress'
+      status: 'completed'
     },
     {
       id: 3,
@@ -452,11 +452,11 @@ export default function Projects() {
   };
 
   return (
-    <section id="proyectos" className="section-container overflow-hidden relative">
+    <section id="proyectos" className="section-container relative">
       {/* Background decorative elements */}
-      <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute -top-40 -right-40 w-80 h-80 rounded-full bg-gradient-to-br from-primary-500/20 to-purple-600/20 blur-3xl" />
-        <div className="absolute -bottom-40 -left-40 w-80 h-80 rounded-full bg-gradient-to-br from-blue-500/20 to-primary-500/20 blur-3xl" />
+      <div className="absolute inset-0 pointer-events-none">
+        <div className="absolute -top-40 -right-40 w-96 h-96 rounded-full bg-gradient-to-br from-primary-500/15 to-purple-600/15 blur-[100px]" />
+        <div className="absolute -bottom-40 -left-40 w-96 h-96 rounded-full bg-gradient-to-br from-blue-500/15 to-primary-500/15 blur-[100px]" />
       </div>
 
       <motion.div

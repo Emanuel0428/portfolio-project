@@ -3,7 +3,7 @@ import { ThemeProvider } from './context/ThemeContext';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import ParticlesComponent from './components/Particles';
-import { Helmet } from 'react-helmet';
+import { Helmet } from 'react-helmet-async';
 
 const Hero = React.lazy(() => import('./components/Hero'));
 const About = React.lazy(() => import('./components/About'));
@@ -13,7 +13,7 @@ const Experience = React.lazy(() => import('./components/Experience'));
 const Contact = React.lazy(() => import('./components/Contact'));
 
 const Layout = ({ children }: { children: React.ReactNode }) => (
-  <div className="min-h-screen bg-white dark:bg-gray-800 transition-colors duration-300 relative">
+  <div className="min-h-screen bg-white dark:bg-gray-800 transition-colors duration-300 relative overflow-x-hidden">
     <div className="absolute inset-0 z-0">
       <ParticlesComponent />
     </div>

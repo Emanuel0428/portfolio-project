@@ -57,11 +57,11 @@ export default function Experience() {
   ];
 
   return (
-    <section id="experiencia" className="section-container relative overflow-hidden">
+    <section id="experiencia" className="section-container relative">
       {/* Background decorative elements */}
-      <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute top-1/4 left-1/3 w-80 h-80 rounded-full bg-gradient-to-br from-primary-500/20 to-purple-600/20 blur-3xl" />
-        <div className="absolute -bottom-40 -right-40 w-80 h-80 rounded-full bg-gradient-to-br from-blue-500/20 to-primary-500/20 blur-3xl" />
+      <div className="absolute inset-0 pointer-events-none">
+        <div className="absolute top-1/4 left-1/3 w-96 h-96 rounded-full bg-gradient-to-br from-primary-500/15 to-purple-600/15 blur-[100px]" />
+        <div className="absolute -bottom-40 -right-40 w-96 h-96 rounded-full bg-gradient-to-br from-blue-500/15 to-primary-500/15 blur-[100px]" />
       </div>
 
       <motion.div
