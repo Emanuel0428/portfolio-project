@@ -11,8 +11,8 @@ export default function Navbar() {
 
   const menuItems = [
     { id: 'inicio', label: 'Inicio', icon: Home },
-    { id: 'sobre-mí', label: 'Sobre Mí', icon: User },
     { id: 'proyectos', label: 'Proyectos', icon: Briefcase },
+    { id: 'sobre-mí', label: 'Sobre Mí', icon: User },
     { id: 'tecnologías', label: 'Tecnologías', icon: Settings },
     { id: 'contacto', label: 'Contacto', icon: Mail },
   ];
@@ -107,7 +107,7 @@ export default function Navbar() {
             <div className="flex items-center justify-between">
               {/* Logo */}
               <motion.div 
-                className="flex items-center space-x-3 cursor-pointer group"
+                className="flex items-center space-x-6 cursor-pointer group"
                 onClick={() => scrollToSection('inicio')}
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
@@ -118,7 +118,7 @@ export default function Navbar() {
                     transition={{ duration: 8, repeat: Infinity, ease: "linear" }}
                     className="absolute inset-0"
                   >
-                    <Code2 className="w-8 h-8 text-primary-600 dark:text-primary-400" />
+                    <Code2 className="w-6 h-6 text-primary-600 dark:text-primary-400" />
                   </motion.div>
                   <motion.div
                     animate={{ rotate: -360 }}

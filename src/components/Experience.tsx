@@ -1,4 +1,3 @@
-import React from 'react';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import { 
@@ -44,12 +43,10 @@ export default function Experience() {
         'Diseño de patrones arquitectónicos: MVC, MVP, MVVM y Clean Architecture',
         'Desarrollo de microservicios y arquitecturas distribuidas',
         'Implementación de principios SOLID y patrones de diseño',
-        'Modelamiento matemático y análisis de sistemas computacionales',
         'Desarrollo de aplicaciones móviles nativas e híbridas',
         'Gestión de proyectos de software con metodologías ágiles',
         'Análisis y diseño de sistemas de información empresariales',
         'Implementación de soluciones de inteligencia artificial básica',
-        'Desarrollo de sistemas operativos y programación de bajo nivel',
         'Proyectos colaborativos interdisciplinarios con equipos multifuncionales'
       ],
       technologies: ['Java', 'C#', 'Python', 'JavaScript', 'SQL', 'MongoDB', 'Android Studio', 'Machine Learning', 'Arquitectura de Software', 'Patrones de Diseño', 'Microservicios', 'Clean Architecture', 'Metodologías Ágiles']
@@ -92,95 +89,92 @@ export default function Experience() {
         </div>
 
         {/* Timeline */}
-        <div className="max-w-4xl mx-auto space-y-8">
+        <div className="max-w-4xl mx-auto">
           {experiences.map((exp, index) => (
             <motion.div
               key={index}
               initial={{ opacity: 0, y: 20 }}
               animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
               transition={{ duration: 0.6, delay: 0.6 + index * 0.2 }}
-              className="relative"
+              className="flex gap-4 md:gap-8 items-start"
             >
-              {/* Timeline line */}
-              {index < experiences.length - 1 && (
-                <div className="absolute left-6 md:left-8 top-16 w-0.5 h-32 bg-gradient-to-b from-primary-500 to-purple-600 opacity-30" />
-              )}
-
-              <div className="flex flex-col md:flex-row gap-8 items-start">
-                {/* Timeline dot */}
-                <div className="flex-shrink-0 relative">
-                  <div className="w-12 h-12 md:w-16 md:h-16 rounded-full bg-gradient-to-br from-primary-500 to-purple-600 flex items-center justify-center shadow-lg">
-                    <div className="w-6 h-6 md:w-8 md:h-8 rounded-full bg-white dark:bg-gray-900" />
-                  </div>
+              {/* Dot + vertical line column */}
+              <div className="flex flex-col items-center self-stretch flex-shrink-0">
+                <div className="w-10 h-10 md:w-14 md:h-14 rounded-full bg-gradient-to-br from-primary-500 to-purple-600 flex items-center justify-center shadow-lg flex-shrink-0">
+                  <div className="w-5 h-5 md:w-7 md:h-7 rounded-full bg-white dark:bg-gray-900" />
                 </div>
+                {index < experiences.length - 1 && (
+                  <div className="flex-1 w-0.5 mt-2 mb-0 bg-gradient-to-b from-primary-500/50 to-purple-600/20 rounded-full" />
+                )}
+              </div>
 
-                {/* Content */}
-                <div className="flex-1">
-                  <div className="glass-card p-8 rounded-3xl hover:scale-[1.01] transition-all duration-300">
-                    {/* Header */}
-                    <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between mb-6">
-                      <div>
-                        <h3 className="text-xl md:text-2xl font-bold text-gray-900 dark:text-white mb-2">
-                          {exp.title}
-                        </h3>
-                        <p className="text-primary-600 dark:text-primary-400 font-semibold text-lg">
-                          {exp.company}
-                        </p>
-                      </div>
-                      <div className="flex flex-col lg:items-end mt-4 lg:mt-0 space-y-2">
-                        <div className="flex items-center space-x-2 text-gray-600 dark:text-gray-300">
-                          <Calendar className="w-4 h-4" />
-                          <span className="text-sm font-medium">{exp.period}</span>
-                        </div>
-                        <div className="flex items-center space-x-2 text-gray-600 dark:text-gray-300">
-                          <MapPin className="w-4 h-4" />
-                          <span className="text-sm">{exp.location}</span>
-                          <span className="px-2 py-1 text-xs rounded-full bg-primary-100 dark:bg-primary-900/30 text-primary-700 dark:text-primary-300">
-                            {exp.type}
-                          </span>
-                        </div>
-                      </div>
+              {/* Card */}
+              <div className="flex-1 pb-10">
+                <div className="glass-card p-4 md:p-8 rounded-2xl md:rounded-3xl hover:scale-[1.01] transition-all duration-300">
+
+                  {/* Header */}
+                  <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-3 mb-4">
+                    <div className="flex-1 min-w-0">
+                      <h3 className="text-lg md:text-2xl font-bold text-gray-900 dark:text-white leading-tight mb-1">
+                        {exp.title}
+                      </h3>
+                      <p className="text-primary-600 dark:text-primary-400 font-semibold text-sm md:text-base">
+                        {exp.company}
+                      </p>
                     </div>
-
-                    {/* Description */}
-                    <p className="text-gray-600 dark:text-gray-300 mb-6 leading-relaxed">
-                      {exp.description}
-                    </p>
-
-                    {/* Achievements */}
-                    <div className="mb-6">
-                      <h4 className="text-sm font-semibold text-gray-900 dark:text-white mb-3 flex items-center space-x-2">
-                        <Star className="w-4 h-4 text-primary-500" />
-                        <span>Logros destacados:</span>
-                      </h4>
-                      <ul className="space-y-2">
-                        {exp.achievements.map((achievement, achIndex) => (
-                          <li key={achIndex} className="flex items-start space-x-3">
-                            <div className="w-1.5 h-1.5 rounded-full bg-primary-500 mt-2 flex-shrink-0" />
-                            <span className="text-gray-600 dark:text-gray-300 text-sm">
-                              {achievement}
-                            </span>
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-
-                    {/* Technologies */}
-                    <div>
-                      <h4 className="text-sm font-semibold text-gray-900 dark:text-white mb-3 flex items-center space-x-2">
-                        <Code2 className="w-4 h-4 text-primary-500" />
-                        <span>Tecnologías utilizadas:</span>
-                      </h4>
-                      <div className="flex flex-wrap gap-2">
-                        {exp.technologies.map((tech, techIndex) => (
-                          <span
-                            key={techIndex}
-                            className="px-3 py-1 text-sm rounded-full bg-primary-100 dark:bg-primary-900/30 text-primary-700 dark:text-primary-300 font-medium"
-                          >
-                            {tech}
-                          </span>
-                        ))}
+                    <div className="flex flex-row sm:flex-col sm:items-end gap-2 flex-shrink-0 flex-wrap">
+                      <div className="flex items-center gap-1.5 text-gray-500 dark:text-gray-400">
+                        <Calendar className="w-3.5 h-3.5" />
+                        <span className="text-xs font-medium">{exp.period}</span>
                       </div>
+                      <div className="flex items-center gap-1.5 text-gray-500 dark:text-gray-400">
+                        <MapPin className="w-3.5 h-3.5" />
+                        <span className="text-xs">{exp.location}</span>
+                      </div>
+                      <span className="px-2 py-0.5 text-xs rounded-full bg-primary-100 dark:bg-primary-900/30 text-primary-700 dark:text-primary-300 font-medium w-fit">
+                        {exp.type}
+                      </span>
+                    </div>
+                  </div>
+
+                  {/* Description */}
+                  <p className="text-gray-600 dark:text-gray-300 mb-5 leading-relaxed text-sm md:text-base">
+                    {exp.description}
+                  </p>
+
+                  {/* Achievements */}
+                  <div className="mb-5">
+                    <h4 className="text-xs md:text-sm font-semibold text-gray-900 dark:text-white mb-3 flex items-center gap-2 uppercase tracking-wide">
+                      <Star className="w-3.5 h-3.5 text-primary-500" />
+                      Logros destacados
+                    </h4>
+                    <ul className="grid grid-cols-1 md:grid-cols-2 gap-x-6 gap-y-1.5">
+                      {exp.achievements.map((achievement, achIndex) => (
+                        <li key={achIndex} className="flex items-start gap-2">
+                          <div className="w-1.5 h-1.5 rounded-full bg-primary-500 mt-1.5 flex-shrink-0" />
+                          <span className="text-gray-600 dark:text-gray-300 text-xs md:text-sm leading-snug">
+                            {achievement}
+                          </span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+
+                  {/* Technologies */}
+                  <div>
+                    <h4 className="text-xs md:text-sm font-semibold text-gray-900 dark:text-white mb-3 flex items-center gap-2 uppercase tracking-wide">
+                      <Code2 className="w-3.5 h-3.5 text-primary-500" />
+                      Tecnologías
+                    </h4>
+                    <div className="flex flex-wrap gap-1.5">
+                      {exp.technologies.map((tech, techIndex) => (
+                        <span
+                          key={techIndex}
+                          className="px-2.5 py-1 text-xs rounded-full bg-primary-100 dark:bg-primary-900/30 text-primary-700 dark:text-primary-300 font-medium"
+                        >
+                          {tech}
+                        </span>
+                      ))}
                     </div>
                   </div>
                 </div>

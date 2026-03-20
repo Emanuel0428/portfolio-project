@@ -74,7 +74,7 @@ export default function About() {
               <h3 className="text-2xl font-bold text-gray-900 dark:text-white">Mi Historia</h3>
             </div>              <div className="space-y-4 text-gray-600 dark:text-gray-300 leading-relaxed">
               <p>
-                Soy <strong>Emanuel Londoño</strong>, estudiante de 6to semestre de Ingeniería en Sistemas e Informática 
+                Soy <strong>Emanuel Londoño</strong>, estudiante de 7to semestre de Ingeniería en Sistemas e Informática 
                 en la <strong>Universidad Pontificia Bolivariana</strong> de Medellín. Mi pasión por la tecnología 
                 me impulsa a crear soluciones innovadoras con impacto real.
               </p>

@@ -31,7 +31,7 @@ export default function Footer() {
   };
 
   return (
-    <footer className="relative py-16 bg-white dark:bg-gray-900 overflow-hidden">
+    <footer className="relative py-6 bg-slate-400 dark:bg-gray-900 overflow-hidden pb-10">
       {/* Background decorative elements */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <div className="absolute top-1/2 left-1/4 w-64 h-64 rounded-full bg-gradient-to-br from-primary-500/5 to-purple-600/5 blur-3xl" />
@@ -148,7 +148,7 @@ export default function Footer() {
           </motion.div>
 
           {/* Copyright and scroll to top */}
-          <div className="flex flex-col sm:flex-row items-center justify-between pt-8 border-t border-gray-200/20 dark:border-gray-700/20">
+          <div className="flex flex-col sm:flex-row items-center justify-between pt-4 border-t border-gray-200/20 dark:border-gray-700/20">
             <div className="text-sm text-gray-500 dark:text-gray-400 mb-4 sm:mb-0">
               © {currentYear} Emanuel Londoño. Todos los derechos reservados.
             </div>
@@ -169,7 +169,7 @@ export default function Footer() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.7 }}
-            className="grid grid-cols-2 md:grid-cols-4 gap-6 pt-8"
+            className="grid grid-cols-2 md:grid-cols-4 gap-6"
           >
             <div className="text-center">
               <div className="text-2xl font-bold text-primary-600 dark:text-primary-400">∞</div>

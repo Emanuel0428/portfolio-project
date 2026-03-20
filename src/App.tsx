@@ -13,7 +13,7 @@ const Experience = React.lazy(() => import('./components/Experience'));
 const Contact = React.lazy(() => import('./components/Contact'));
 
 const Layout = ({ children }: { children: React.ReactNode }) => (
-  <div className="min-h-screen bg-white dark:bg-gray-800 transition-colors duration-300 relative overflow-x-hidden">
+  <div className="min-h-screen bg-slate-300 dark:bg-gray-800 transition-colors duration-300 relative overflow-x-hidden">
     <div className="absolute inset-0 z-0">
       <ParticlesComponent />
     </div>

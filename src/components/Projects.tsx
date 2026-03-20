@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
-import { ExternalLink, Github, X, Filter, Eye, Code2, Sparkles, Bot, Store, ChevronLeft, ChevronRight } from 'lucide-react';
+import { ExternalLink, Github, X, Filter, Eye, Code2, Sparkles, Bot, Store, ChevronLeft, ChevronRight, Smartphone } from 'lucide-react';
 
 interface Project {
   id: number;
@@ -10,7 +10,7 @@ interface Project {
   fullDescription: string;
   images: string[];
   tech: string[];
-  category: 'ai' | 'ecommerce' | 'webapp' | 'api';
+  category: 'ai' | 'ecommerce' | 'webapp' | 'api' | 'mobile';
   links: {
     demo?: string;
     github: string;
@@ -31,34 +31,6 @@ export default function Projects() {
   });
 
   const projects: Project[] = [
-    {
-      id: 1,
-      title: 'FlowForgeAI',
-      description: 'Asistente inteligente para negocios que brinda estrategias personalizadas según la información recopilada.',
-      fullDescription: 'Una plataforma avanzada de inteligencia artificial diseñada para ayudar a todo tipo de negocios. Utiliza machine learning para analizar datos empresariales y generar estrategias personalizadas que impulsen el crecimiento y la eficiencia operativa.',
-      images: [
-        'https://i.postimg.cc/sxTwFzJ6/Captura-de-pantalla-2025-06-13-190058.png?auto=format&fit=crop&q=80&w=800&h=600',
-        'https://i.postimg.cc/htzMYHQs/Captura-de-pantalla-2025-06-13-190144.png?auto=format&fit=crop&q=80&w=800&h=600',
-        'https://i.postimg.cc/2jGHLdfQ/Captura-de-pantalla-2025-06-13-190153.png?auto=format&fit=crop&q=80&w=800&h=600',
-        'https://i.postimg.cc/RVbXXMhq/Captura-de-pantalla-2025-06-13-190219.png?auto=format&fit=crop&q=80&w=800&h=600',
-        'https://i.postimg.cc/yYNLmJVw/Captura-de-pantalla-2025-06-13-190228.png?auto=format&fit=crop&q=80&w=800&h=600'
-      ],
-      tech: ['TypeScript', 'React', 'Node.js', 'AI/ML', 'Business Intelligence'],
-      category: 'ai',
-      links: {
-        demo: 'https://flowforge-ai.netlify.app/',
-        github: 'https://github.com/Emanuel0428/FlowForgeAI',
-      },
-      features: [
-        'Análisis inteligente de datos empresariales',
-        'Generación de estrategias personalizadas',
-        'Dashboard interactivo con métricas',
-        'Integración con APIs de business intelligence',
-        'Reportes automatizados',
-        'Interfaz intuitiva para usuarios no técnicos'
-      ],
-      status: 'completed'
-    },
     {
       id: 2,
       title: 'All-in-One Fitness App V.1',
@@ -117,6 +89,32 @@ export default function Projects() {
     },
     {
       id: 4,
+      title: 'TimeLock App',
+      description: 'App Android híbrida para gestionar el tiempo de pantalla con modo Pomodoro, sistema de tokens, desafíos y bloqueo de aplicaciones.',
+      fullDescription: 'Aplicación móvil para Android construida con React y Capacitor que ayuda a controlar el uso del teléfono. Incluye un modo Pomodoro con fases de enfoque y descanso, un sistema de tokens que recompensa los buenos hábitos, desafíos personalizables, bloqueo nativo de apps y métricas detalladas por hora del día. Publicada en la Play Store.',
+      images: [
+        "https://i.postimg.cc/L58GZybf/brave-screenshot-emanuel0428-github-io.png",
+        "https://i.postimg.cc/6qpFGHmZ/brave-screenshot-emanuel0428-github-io-(1).png",
+        "https://i.postimg.cc/90QsqxnR/brave-screenshot-emanuel0428-github-io-(2).png"
+      ],
+      tech: ['React', 'TypeScript', 'Capacitor', 'Tailwind CSS', 'Android'],
+      category: 'mobile',
+      links: {
+        demo: 'https://emanuel0428.github.io/TimeLockApp/',
+        github: 'https://github.com/Emanuel0428/TimeLockApp',
+      },
+      features: [
+        'Modo Pomodoro con fases de enfoque y descanso personalizables',
+        'Sistema de tokens: recompensas automáticas por buenos hábitos',
+        'Desafíos con motor de evaluación automatizada',
+        'Bloqueo nativo de apps con permisos UsageStats y Overlay',
+        'Dashboard con métricas detalladas por hora del día',
+        'Publicada en Google Play Store'
+      ],
+      status: 'completed'
+    },
+    {
+      id: 5,
       title: 'Mercados Mi Punto',
       description: 'Aplicación web de e-commerce para productos frescos de alta calidad con funcionalidades avanzadas.',
       fullDescription: 'Una plataforma completa de comercio electrónico especializada en productos frescos. Incluye un sistema robusto de gestión de inventario, autenticación JWT, carrito persistente y un panel administrativo para la gestión completa del negocio.',
@@ -144,7 +142,35 @@ export default function Projects() {
       status: 'completed'
     },
     {
-      id: 5,
+      id: 1,
+      title: 'FlowForgeAI',
+      description: 'Asistente inteligente para negocios que brinda estrategias personalizadas según la información recopilada.',
+      fullDescription: 'Una plataforma avanzada de inteligencia artificial diseñada para ayudar a todo tipo de negocios. Utiliza machine learning para analizar datos empresariales y generar estrategias personalizadas que impulsen el crecimiento y la eficiencia operativa.',
+      images: [
+        'https://i.postimg.cc/sxTwFzJ6/Captura-de-pantalla-2025-06-13-190058.png?auto=format&fit=crop&q=80&w=800&h=600',
+        'https://i.postimg.cc/htzMYHQs/Captura-de-pantalla-2025-06-13-190144.png?auto=format&fit=crop&q=80&w=800&h=600',
+        'https://i.postimg.cc/2jGHLdfQ/Captura-de-pantalla-2025-06-13-190153.png?auto=format&fit=crop&q=80&w=800&h=600',
+        'https://i.postimg.cc/RVbXXMhq/Captura-de-pantalla-2025-06-13-190219.png?auto=format&fit=crop&q=80&w=800&h=600',
+        'https://i.postimg.cc/yYNLmJVw/Captura-de-pantalla-2025-06-13-190228.png?auto=format&fit=crop&q=80&w=800&h=600'
+      ],
+      tech: ['TypeScript', 'React', 'Node.js', 'AI/ML', 'Business Intelligence'],
+      category: 'ai',
+      links: {
+        demo: 'https://flowforge-ai.netlify.app/',
+        github: 'https://github.com/Emanuel0428/FlowForgeAI',
+      },
+      features: [
+        'Análisis inteligente de datos empresariales',
+        'Generación de estrategias personalizadas',
+        'Dashboard interactivo con métricas',
+        'Integración con APIs de business intelligence',
+        'Reportes automatizados',
+        'Interfaz intuitiva para usuarios no técnicos'
+      ],
+      status: 'completed'
+    },
+    {
+      id: 6,
       title: 'WebApp Restaurante',
       description: 'Aplicación web moderna para gestión de restaurantes con funcionalidades de reservas y menús.',
       fullDescription: 'Sistema integral para la gestión de restaurantes que incluye manejo de menús digitales, sistema de reservas, gestión de mesas y análisis de ventas. Diseñado para optimizar la experiencia tanto del cliente como del personal del restaurante.',
@@ -171,7 +197,7 @@ export default function Projects() {
       status: 'completed'
     },
     {
-      id: 6,
+      id: 7,
       title: 'Translation API',
       description: 'API desarrollada en Python para la traducción automática de archivos PDF y DOCX.',
       fullDescription: 'API especializada en la traducción de documentos que soporta múltiples formatos de archivo. Utiliza tecnologías modernas de procesamiento de texto y APIs de traducción para ofrecer resultados precisos y rápidos.',
@@ -198,7 +224,7 @@ export default function Projects() {
       status: 'completed'
     },
     {
-      id: 7,
+      id: 8,
       title: 'Generador de Ideas de Videos',
       description: 'Sistema de IA avanzado para creación de contenido viral usando web scraping de tendencias y análisis predictivo.',
       fullDescription: 'Un sistema completamente automatizado que genera ideas de videos optimizadas para diferentes redes sociales usando Inteligencia Artificial, web scraping de tendencias reales y análisis predictivo de viralidad. Utiliza Gemini 2.0 Flash para generar contenido de alta calidad con múltiples tipos de contenido por red social.',
@@ -225,7 +251,7 @@ export default function Projects() {
       status: 'completed'
     },
     {
-      id: 8,
+      id: 9,
       title: 'Match Cut Generator',
       description: 'Generador de videos con efectos de texto dinámicos y transiciones suaves usando múltiples proveedores de IA.',
       fullDescription: 'Un generador avanzado de videos con efectos de texto dinámicos, enfocado en crear transiciones suaves y efectos visuales atractivos. Incluye interfaz web intuitiva, efectos visuales avanzados como desenfoque radial y gaussiano, texturas de fondo predefinidas y soporte para múltiples proveedores de IA como Mistral, Google Gemini, Anthropic Claude y DeepSeek.',
@@ -250,115 +276,7 @@ export default function Projects() {
         'Sistema robusto de manejo de errores'
       ],
       status: 'completed'
-    },/*
-    {
-      id: 9,
-      title: 'EcoTrack Marketplace',
-      description: 'Marketplace ecológico para productos sostenibles con sistema de trazabilidad y certificaciones verdes.',
-      fullDescription: 'Plataforma de comercio electrónico especializada en productos ecológicos y sostenibles. Incluye sistema de trazabilidad completa, verificación de certificaciones ambientales y programa de compensación de carbono.',
-      images: [
-        'https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?auto=format&fit=crop&q=80&w=800&h=600',
-        'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&q=80&w=800&h=600',
-        'https://images.unsplash.com/photo-1516738901171-8eb4fc13bd20?auto=format&fit=crop&q=80&w=800&h=600',
-        'https://images.unsplash.com/photo-1560472354-b33ff0c44a43?auto=format&fit=crop&q=80&w=800&h=600',
-        'https://images.unsplash.com/photo-1503596476-1c12a8ba09a9?auto=format&fit=crop&q=80&w=800&h=600'
-      ],
-      tech: ['React', 'Node.js', 'Blockchain', 'PostgreSQL', 'Stripe'],
-      category: 'ecommerce',
-      links: {
-        github: 'https://github.com/Emanuel0428/ecotrack-marketplace',
-      },
-      features: [
-        'Trazabilidad completa de productos',
-        'Verificación de certificaciones ecológicas',
-        'Calculadora de huella de carbono',
-        'Programa de compensación ambiental',
-        'Marketplace multi-vendor',
-        'Sistema de reviews verificadas'
-      ],
-      status: 'in-progress'
-    },
-    {
-      id: 10,
-      title: 'DevConnect API Hub',
-      description: 'API Gateway y hub de desarrollo para conectar múltiples servicios con documentación automática.',
-      fullDescription: 'Plataforma centralizada para la gestión de APIs que incluye gateway inteligente, documentación automática, monitoreo en tiempo real y herramientas de testing. Diseñada para simplificar la integración de microservicios.',
-      images: [
-        'https://images.unsplash.com/photo-1518432031352-d6fc5c10da5a?auto=format&fit=crop&q=80&w=800&h=600',
-        'https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&q=80&w=800&h=600',
-        'https://images.unsplash.com/photo-1555949963-aa79dcee981c?auto=format&fit=crop&q=80&w=800&h=600',
-        'https://images.unsplash.com/photo-1504639725590-34d0984388bd?auto=format&fit=crop&q=80&w=800&h=600',
-        'https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?auto=format&fit=crop&q=80&w=800&h=600'
-      ],
-      tech: ['Node.js', 'Express', 'Redis', 'Docker', 'GraphQL'],
-      category: 'api',
-      links: {
-        github: 'https://github.com/Emanuel0428/devconnect-api-hub',
-      },
-      features: [
-        'API Gateway inteligente',
-        'Documentación automática con Swagger',
-        'Rate limiting y autenticación',
-        'Monitoreo y analytics en tiempo real',
-        'Testing integrado de endpoints',
-        'Versionado automático de APIs'
-      ],
-      status: 'completed'
-    },
-    {
-      id: 11,
-      title: 'EducaStream Platform',
-      description: 'Plataforma de educación online con streaming en vivo, quizzes interactivos y seguimiento de progreso.',
-      fullDescription: 'Sistema completo de educación virtual que combina clases en vivo, contenido grabado, evaluaciones interactivas y seguimiento detallado del progreso estudiantil. Incluye herramientas de colaboración y gamificación.',
-      images: [
-        'https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&q=80&w=800&h=600',
-        'https://images.unsplash.com/photo-1524178232363-1fb2b075b655?auto=format&fit=crop&q=80&w=800&h=600',
-        'https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&q=80&w=800&h=600',
-        'https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&q=80&w=800&h=600',
-        'https://images.unsplash.com/photo-1580894894513-541e068a3e2b?auto=format&fit=crop&q=80&w=800&h=600'
-      ],
-      tech: ['React', 'WebRTC', 'Socket.io', 'MongoDB', 'AWS S3'],
-      category: 'webapp',
-      links: {
-        github: 'https://github.com/Emanuel0428/educastream-platform',
-      },
-      features: [
-        'Streaming en vivo de alta calidad',
-        'Quizzes y evaluaciones interactivas',
-        'Sistema de gamificación',
-        'Chat y foros de discusión',
-        'Grabación automática de clases',
-        'Certificados digitales'
-      ],
-      status: 'in-progress'
-    },
-    {
-      id: 12,
-      title: 'AI Content Generator',
-      description: 'Generador de contenido automatizado usando IA para crear textos, imágenes y videos personalizados.',
-      fullDescription: 'Plataforma avanzada que utiliza múltiples modelos de IA para generar contenido multimedia de alta calidad. Incluye generación de texto, imágenes, videos cortos y optimización SEO automática.',
-      images: [
-        'https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&q=80&w=800&h=600',
-        'https://images.unsplash.com/photo-1620712943543-bcc4688e7485?auto=format&fit=crop&q=80&w=800&h=600',
-        'https://images.unsplash.com/photo-1633356122102-3fe601e05bd2?auto=format&fit=crop&q=80&w=800&h=600',
-        'https://images.unsplash.com/photo-1639322537228-f710d846310a?auto=format&fit=crop&q=80&w=800&h=600',
-        'https://images.unsplash.com/photo-1655720828018-edd2daec9349?auto=format&fit=crop&q=80&w=800&h=600'
-      ],
-      tech: ['Python', 'OpenAI GPT', 'Stable Diffusion', 'FastAPI', 'Redis'],
-      category: 'ai',
-      links: {
-        github: 'https://github.com/Emanuel0428/ai-content-generator',
-      },
-      features: [
-        'Generación de textos con GPT',
-        'Creación de imágenes con IA',
-        'Videos cortos automatizados',
-        'Optimización SEO inteligente',
-        'Templates personalizables',
-        'API para desarrolladores'
-      ],
-      status: 'completed'
-    }*/
+    }
   ];
 
   const filters = [
@@ -366,6 +284,7 @@ export default function Projects() {
     { id: 'ai', label: 'IA & ML', icon: Bot },
     { id: 'ecommerce', label: 'E-commerce', icon: Store },
     { id: 'webapp', label: 'Web Apps', icon: Code2 },
+    { id: 'mobile', label: 'Mobile', icon: Smartphone },
     { id: 'api', label: 'APIs', icon: Filter },
   ];
 
@@ -373,7 +292,15 @@ export default function Projects() {
     ? projects 
     : projects.filter(project => project.category === selectedFilter);
 
-  const PROJECTS_PER_PAGE = 6;
+  const [isMobile, setIsMobile] = React.useState(() => window.innerWidth < 768);
+
+  React.useEffect(() => {
+    const handleResize = () => setIsMobile(window.innerWidth < 768);
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
+  const PROJECTS_PER_PAGE = isMobile ? 3 : 6;
   const totalPages = Math.ceil(filteredProjects.length / PROJECTS_PER_PAGE);
   const startIndex = currentPage * PROJECTS_PER_PAGE;
   const endIndex = startIndex + PROJECTS_PER_PAGE;
@@ -489,7 +416,7 @@ export default function Projects() {
         initial={{ opacity: 0, y: 20 }}
         animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
         transition={{ duration: 0.9, delay: 0.9 }}
-        className="flex flex-wrap justify-center gap-4 mb-8 relative z-10"
+        className="flex flex-wrap justify-center gap-2 md:gap-4 mb-8 relative z-10"
       >
         {filters.map((filter) => {
           const IconComponent = filter.icon;
@@ -500,15 +427,15 @@ export default function Projects() {
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               onClick={() => setSelectedFilter(filter.id)}
-              className={`flex items-center space-x-2 px-6 py-3 rounded-full font-medium transition-all duration-300 backdrop-blur-sm border ${
+              className={`flex items-center space-x-1.5 px-3 py-2 md:px-6 md:py-3 rounded-full font-medium text-xs md:text-sm transition-all duration-300 backdrop-blur-sm border ${
                 selectedFilter === filter.id
                   ? 'bg-gradient-to-r from-primary-500 to-purple-600 text-white border-primary-500 shadow-lg shadow-primary-500/25'
                   : 'bg-white/10 dark:bg-gray-800/50 text-gray-700 dark:text-gray-300 border-gray-200 dark:border-gray-700 hover:bg-white/20 dark:hover:bg-gray-700/50'
               }`}
             >
-              <IconComponent className="w-4 h-4" />
+              <IconComponent className="w-3.5 h-3.5 md:w-4 md:h-4" />
               <span>{filter.label}</span>
-              <span className={`text-xs px-2 py-0.5 rounded-full ${
+              <span className={`text-xs px-1.5 py-0.5 rounded-full ${
                 selectedFilter === filter.id
                   ? 'bg-white/20 text-white'
                   : 'bg-primary-100 dark:bg-primary-900/30 text-primary-600 dark:text-primary-400'
@@ -525,42 +452,39 @@ export default function Projects() {
         initial={{ opacity: 0, y: 20 }}
         animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
         transition={{ duration: 0.6, delay: 1.1 }}
-        className="flex items-center justify-between mb-8 relative z-10"
+        className="flex items-center justify-between mb-8 relative z-10 gap-2"
       >
         <motion.button
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
           onClick={prevPage}
           disabled={currentPage === 0}
-          className={`flex items-center space-x-2 px-6 py-3 rounded-full font-medium transition-all duration-300 ${
+          className={`flex items-center space-x-1.5 px-3 py-2.5 md:px-6 md:py-3 rounded-full font-medium transition-all duration-300 ${
             currentPage === 0
               ? 'bg-gray-100 dark:bg-gray-800 text-gray-400 dark:text-gray-600 cursor-not-allowed'
               : 'bg-white/10 dark:bg-gray-800/50 text-gray-700 dark:text-gray-300 hover:bg-white/20 dark:hover:bg-gray-700/50 backdrop-blur-sm border border-gray-200 dark:border-gray-700'
           }`}
         >
-          <ChevronLeft className="w-5 h-5" />
-          <span>Anterior</span>
+          <ChevronLeft className="w-4 h-4 md:w-5 md:h-5" />
+          <span className="hidden sm:inline text-sm">Anterior</span>
         </motion.button>
 
-        <div className="flex items-center space-x-4">
-          <span className="text-sm text-gray-600 dark:text-gray-300">
-            Página {currentPage + 1} de {totalPages}
-          </span>
+        <div className="flex flex-col items-center gap-2">
           <div className="flex items-center space-x-2">
             {Array.from({ length: totalPages }, (_, i) => (
               <button
                 key={i}
                 onClick={() => setCurrentPage(i)}
-                className={`w-3 h-3 rounded-full transition-all duration-300 ${
+                className={`rounded-full transition-all duration-300 ${
                   i === currentPage
-                    ? 'bg-primary-500 scale-125'
-                    : 'bg-gray-300 dark:bg-gray-600 hover:bg-primary-300 dark:hover:bg-primary-700'
+                    ? 'bg-primary-500 w-5 h-3 md:w-4 md:h-4'
+                    : 'w-3 h-3 bg-gray-300 dark:bg-gray-600 hover:bg-primary-300 dark:hover:bg-primary-700'
                 }`}
               />
             ))}
           </div>
-          <span className="text-sm text-gray-600 dark:text-gray-300">
-            {startIndex + 1}-{Math.min(endIndex, filteredProjects.length)} de {filteredProjects.length}
+          <span className="text-xs text-gray-500 dark:text-gray-400">
+            {startIndex + 1}–{Math.min(endIndex, filteredProjects.length)} de {filteredProjects.length}
           </span>
         </div>
 
@@ -569,14 +493,14 @@ export default function Projects() {
           whileTap={{ scale: 0.95 }}
           onClick={nextPage}
           disabled={currentPage === totalPages - 1}
-          className={`flex items-center space-x-2 px-6 py-3 rounded-full font-medium transition-all duration-300 ${
+          className={`flex items-center space-x-1.5 px-3 py-2.5 md:px-6 md:py-3 rounded-full font-medium transition-all duration-300 ${
             currentPage === totalPages - 1
               ? 'bg-gray-100 dark:bg-gray-800 text-gray-400 dark:text-gray-600 cursor-not-allowed'
               : 'bg-white/10 dark:bg-gray-800/50 text-gray-700 dark:text-gray-300 hover:bg-white/20 dark:hover:bg-gray-700/50 backdrop-blur-sm border border-gray-200 dark:border-gray-700'
           }`}
         >
-          <span>Siguiente</span>
-          <ChevronRight className="w-5 h-5" />
+          <span className="hidden sm:inline text-sm">Siguiente</span>
+          <ChevronRight className="w-4 h-4 md:w-5 md:h-5" />
         </motion.button>
       </motion.div>
 
@@ -627,22 +551,28 @@ export default function Projects() {
                   
                   <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                   
-                  {/* Image indicators */}
-                  <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  {/* Image indicators — always visible on mobile, hover on desktop */}
+                  <div className="absolute bottom-3 left-1/2 -translate-x-1/2 flex space-x-1.5 md:opacity-0 md:group-hover:opacity-100 transition-opacity duration-300">
                     {project.images.map((_, index) => (
                       <div
                         key={index}
-                        className={`w-2 h-2 rounded-full transition-all duration-300 ${
+                        className={`h-1.5 rounded-full transition-all duration-300 ${
                           index === (currentImageIndex[project.id] || 0)
-                            ? 'bg-white scale-125'
-                            : 'bg-white/50'
+                            ? 'bg-white w-4'
+                            : 'bg-white/50 w-1.5'
                         }`}
                       />
                     ))}
                   </div>
+
+                  {/* Tap hint — mobile only */}
+                  <div className="absolute top-3 left-3 md:hidden flex items-center gap-1 px-2 py-1 bg-black/40 backdrop-blur-sm rounded-full text-white text-xs">
+                    <Eye className="w-3 h-3" />
+                    <span>Ver detalles</span>
+                  </div>
                   
-                  {/* Hover overlay with click hint */}
-                  <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-300 pointer-events-none">
+                  {/* Hover overlay with click hint — desktop only */}
+                  <div className="absolute inset-0 hidden md:flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-300 pointer-events-none">
                     <motion.div
                       initial={{ scale: 0 }}
                       animate={{ scale: 1 }}
@@ -732,34 +662,66 @@ export default function Projects() {
             onClick={() => setSelectedProject(null)}
           >
             <motion.div
-              initial={{ scale: 0.8, opacity: 0 }}
-              animate={{ scale: 1, opacity: 1 }}
-              exit={{ scale: 0.8, opacity: 0 }}
-              className="relative max-w-4xl w-full max-h-[90vh] overflow-y-auto bg-white dark:bg-gray-900 rounded-3xl shadow-2xl"
+              initial={{ scale: 0.9, opacity: 0, y: 20 }}
+              animate={{ scale: 1, opacity: 1, y: 0 }}
+              exit={{ scale: 0.9, opacity: 0, y: 20 }}
+              className="relative max-w-4xl w-full max-h-[92vh] bg-white dark:bg-gray-900 rounded-2xl md:rounded-3xl shadow-2xl overflow-hidden flex flex-col"
               onClick={(e) => e.stopPropagation()}
             >
+              {/* Close button — absolute sobre el modal, no dentro del scroll */}
               <button
                 onClick={() => setSelectedProject(null)}
-                className="absolute top-6 right-6 z-10 p-2 rounded-full bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors"
+                className="absolute top-4 right-4 z-30 p-2 rounded-full bg-black/40 hover:bg-black/60 text-white backdrop-blur-sm transition-colors shadow-md"
               >
-                <X className="w-5 h-5" />
+                <X className="w-4 h-4" />
               </button>
 
-              <div className="grid md:grid-cols-2 gap-8">
-                <div className="relative aspect-video md:aspect-auto">
+              <div className="flex flex-col md:grid md:grid-cols-2 overflow-y-auto md:overflow-hidden flex-1">
+                {/* Image — scrollable solo en mobile, fija en desktop */}
+                <div className="relative w-full aspect-video md:aspect-auto md:h-auto md:min-h-full flex-shrink-0">
                   <img
                     src={selectedProject.images[0]}
                     alt={selectedProject.title}
-                    className="w-full h-full object-cover md:rounded-l-3xl"
+                    className="w-full h-full object-cover"
                   />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-black/10 to-transparent" />
+                  {/* Título flotante sobre la imagen en desktop */}
+                  <div className="absolute bottom-0 left-0 right-0 p-5 hidden md:block">
+                    <div className="flex flex-wrap items-center gap-2">
+                      <h3 className="text-2xl font-bold text-white leading-tight drop-shadow-lg">
+                        {selectedProject.title}
+                      </h3>
+                      <span className={`px-2.5 py-1 rounded-full text-xs font-medium ${
+                        selectedProject.status === 'completed'
+                          ? 'bg-green-500/80 text-white backdrop-blur-sm'
+                          : 'bg-yellow-500/80 text-white backdrop-blur-sm'
+                      }`}>
+                        {selectedProject.status === 'completed' ? 'Completado' : 'En Progreso'}
+                      </span>
+                    </div>
+                  </div>
                 </div>
 
-                <div className="p-8">
-                  <div className="flex items-center space-x-3 mb-4">
-                    <h3 className="text-3xl font-bold text-gray-900 dark:text-white">
+                {/* Content — scrollable en desktop */}
+                <div className="p-5 md:p-8 flex flex-col md:overflow-y-auto">
+                  {/* Título en mobile (bajo la imagen) */}
+                  <div className="flex flex-wrap items-start gap-2 mb-3 md:hidden">
+                    <h3 className="text-2xl font-bold text-gray-900 dark:text-white leading-tight">
                       {selectedProject.title}
                     </h3>
-                    <span className={`px-3 py-1 rounded-full text-xs font-medium ${
+                    <span className={`px-3 py-1 rounded-full text-xs font-medium shrink-0 ${
+                      selectedProject.status === 'completed'
+                        ? 'bg-green-100 text-green-800 dark:bg-green-900/30 dark:text-green-300'
+                        : 'bg-yellow-100 text-yellow-800 dark:bg-yellow-900/30 dark:text-yellow-300'
+                    }`}>
+                      {selectedProject.status === 'completed' ? 'Completado' : 'En Progreso'}
+                    </span>
+                  </div>
+                  <div className="flex flex-wrap items-start gap-2 mb-3">
+                    <h3 className="text-2xl md:text-3xl font-bold text-gray-900 dark:text-white leading-tight">
+                      {selectedProject.title}
+                    </h3>
+                    <span className={`px-3 py-1 rounded-full text-xs font-medium shrink-0 ${
                       selectedProject.status === 'completed' 
                         ? 'bg-green-100 text-green-800 dark:bg-green-900/30 dark:text-green-300'
                         : 'bg-yellow-100 text-yellow-800 dark:bg-yellow-900/30 dark:text-yellow-300'
@@ -768,33 +730,33 @@ export default function Projects() {
                     </span>
                   </div>
 
-                  <p className="text-gray-600 dark:text-gray-300 mb-6 leading-relaxed">
+                  <p className="text-gray-600 dark:text-gray-300 mb-5 leading-relaxed text-sm md:text-base">
                     {selectedProject.fullDescription}
                   </p>
 
-                  <div className="mb-6">
-                    <h4 className="text-lg font-semibold text-gray-900 dark:text-white mb-3">
+                  <div className="mb-5">
+                    <h4 className="text-base md:text-lg font-semibold text-gray-900 dark:text-white mb-2">
                       Características principales:
                     </h4>
-                    <ul className="space-y-2">
+                    <ul className="space-y-1.5">
                       {selectedProject.features.map((feature, index) => (
-                        <li key={index} className="flex items-center space-x-2 text-gray-600 dark:text-gray-300">
-                          <div className="w-2 h-2 rounded-full bg-primary-500" />
+                        <li key={index} className="flex items-start gap-2 text-sm text-gray-600 dark:text-gray-300">
+                          <div className="w-1.5 h-1.5 rounded-full bg-primary-500 mt-1.5 shrink-0" />
                           <span>{feature}</span>
                         </li>
                       ))}
                     </ul>
                   </div>
 
-                  <div className="mb-8">
-                    <h4 className="text-lg font-semibold text-gray-900 dark:text-white mb-3">
+                  <div className="mb-6">
+                    <h4 className="text-base md:text-lg font-semibold text-gray-900 dark:text-white mb-2">
                       Tecnologías utilizadas:
                     </h4>
                     <div className="flex flex-wrap gap-2">
                       {selectedProject.tech.map((tech) => (
                         <span
                           key={tech}
-                          className="px-4 py-2 rounded-full bg-primary-100 dark:bg-primary-900/30 text-primary-700 dark:text-primary-300 font-medium"
+                          className="px-3 py-1 text-xs md:text-sm rounded-full bg-primary-100 dark:bg-primary-900/30 text-primary-700 dark:text-primary-300 font-medium"
                         >
                           {tech}
                         </span>
@@ -802,7 +764,7 @@ export default function Projects() {
                     </div>
                   </div>
 
-                  <div className="flex space-x-4">
+                  <div className="flex flex-wrap gap-3 mt-auto">
                     {selectedProject.links.demo && (
                       <motion.a
                         whileHover={{ scale: 1.05 }}
@@ -810,9 +772,9 @@ export default function Projects() {
                         href={selectedProject.links.demo}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="flex items-center space-x-2 px-6 py-3 rounded-xl bg-gradient-to-r from-primary-500 to-purple-600 text-white font-medium hover:from-primary-600 hover:to-purple-700 transition-all"
+                        className="flex items-center space-x-2 px-5 py-2.5 rounded-xl bg-gradient-to-r from-primary-500 to-purple-600 text-white font-medium hover:from-primary-600 hover:to-purple-700 transition-all text-sm"
                       >
-                        <ExternalLink className="w-5 h-5" />
+                        <ExternalLink className="w-4 h-4" />
                         <span>Ver Demo</span>
                       </motion.a>
                     )}
@@ -822,9 +784,9 @@ export default function Projects() {
                       href={selectedProject.links.github}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex items-center space-x-2 px-6 py-3 rounded-xl bg-gray-200 dark:bg-gray-700 text-gray-900 dark:text-white hover:bg-gray-300 dark:hover:bg-gray-600 transition-colors"
+                      className="flex items-center space-x-2 px-5 py-2.5 rounded-xl bg-gray-200 dark:bg-gray-700 text-gray-900 dark:text-white hover:bg-gray-300 dark:hover:bg-gray-600 transition-colors text-sm"
                     >
-                      <Github className="w-5 h-5" />
+                      <Github className="w-4 h-4" />
                       <span>Ver Código</span>
                     </motion.a>
                   </div>

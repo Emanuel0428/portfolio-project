@@ -1,13 +1,17 @@
-import React, { useState } from 'react';
-import { motion } from 'framer-motion';
+import { useState } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import { 
   Code2, 
   Database, 
   Brain,
   Cloud,
-  Star
+  Star,
+  ChevronDown,
+  ChevronUp
 } from 'lucide-react';
+
+const ITEMS_PER_PAGE = 6;
 
 // Technology Icons Component
 const TechIcon = ({ name, className = "w-8 h-8" }: { name: string; className?: string }) => {
@@ -113,6 +117,7 @@ const TechIcon = ({ name, className = "w-8 h-8" }: { name: string; className?: s
 
 export default function Technologies() {
   const [selectedFilter, setSelectedFilter] = useState<string>('all');
+  const [visibleCount, setVisibleCount] = useState<number>(ITEMS_PER_PAGE);
   const [ref, inView] = useInView({
     triggerOnce: true,
     threshold: 0.1,
@@ -282,6 +287,23 @@ export default function Technologies() {
     ? technologies 
     : technologies.filter(tech => tech.category === selectedFilter);
 
+  const visibleTechnologies = filteredTechnologies.slice(0, visibleCount);
+  const hasMore = visibleCount < filteredTechnologies.length;
+  const canCollapse = visibleCount > ITEMS_PER_PAGE;
+
+  const handleFilterChange = (filterId: string) => {
+    setSelectedFilter(filterId);
+    setVisibleCount(ITEMS_PER_PAGE);
+  };
+
+  const handleShowMore = () => {
+    setVisibleCount(prev => Math.min(prev + ITEMS_PER_PAGE, filteredTechnologies.length));
+  };
+
+  const handleCollapse = () => {
+    setVisibleCount(ITEMS_PER_PAGE);
+  };
+
   return (
     <section id="tecnologías" className="section-container relative">
       {/* Background decorative elements */}
@@ -333,7 +355,7 @@ export default function Technologies() {
                 key={filter.id}
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                onClick={() => setSelectedFilter(filter.id)}
+                onClick={() => handleFilterChange(filter.id)}
                 className={`flex items-center space-x-2 px-4 py-2 rounded-full font-medium text-sm transition-all ${
                   isActive
                     ? 'bg-primary-600 text-white shadow-lg'
@@ -359,73 +381,123 @@ export default function Technologies() {
           transition={{ duration: 0.6, delay: 0.8 }}
           className="grid md:grid-cols-2 lg:grid-cols-3 gap-6"
         >
-          {filteredTechnologies.map((tech, index) => (
-            <motion.div
-              key={tech.name}
-              initial={{ opacity: 0, y: 20 }}
-              animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
-              transition={{ duration: 0.5, delay: 1 + index * 0.05 }}
-              className="group relative"
-            >
-              <div className="glass-card p-6 rounded-2xl hover:scale-105 transition-all duration-300 border border-gray-200/20 dark:border-gray-700/30 backdrop-blur-md">
-                {/* Tech header */}
-                <div className="flex items-start space-x-4 mb-4">
-                  <div className={`relative p-3 rounded-xl bg-gradient-to-br ${tech.color} shadow-lg group-hover:scale-110 transition-transform duration-300`}>
-                    <TechIcon name={tech.name} className="w-6 h-6 text-white" />
-                  </div>
-                  <div className="flex-1">
-                    <h3 className="font-bold text-gray-900 dark:text-white text-lg mb-2">
-                      {tech.name}
-                    </h3>
-                    <div className="flex items-center space-x-3">
-                      <div className="flex-1 bg-gray-200 dark:bg-gray-700 rounded-full h-2.5 overflow-hidden">
-                        <motion.div
-                          initial={{ width: 0 }}
-                          animate={inView ? { width: `${tech.level}%` } : { width: 0 }}
-                          transition={{ duration: 1.2, delay: 1.2 + index * 0.05, ease: "easeOut" }}
-                          className={`h-full bg-gradient-to-r ${tech.color} rounded-full shadow-sm`}
-                        />
+          <AnimatePresence mode="popLayout">
+            {visibleTechnologies.map((tech, index) => (
+              <motion.div
+                key={tech.name}
+                layout
+                initial={{ opacity: 0, y: 24, scale: 0.97 }}
+                animate={{ opacity: 1, y: 0, scale: 1 }}
+                exit={{ opacity: 0, y: -12, scale: 0.97 }}
+                transition={{ duration: 0.35, delay: index < ITEMS_PER_PAGE ? 1 + index * 0.05 : index * 0.04 }}
+                className="group relative"
+              >
+                <div className="glass-card p-6 rounded-2xl hover:scale-105 transition-all duration-300 border border-gray-200/20 dark:border-gray-700/30 backdrop-blur-md">
+                  {/* Tech header */}
+                  <div className="flex items-start space-x-4 mb-4">
+                    <div className={`relative p-3 rounded-xl bg-gradient-to-br ${tech.color} shadow-lg group-hover:scale-110 transition-transform duration-300`}>
+                      <TechIcon name={tech.name} className="w-6 h-6 text-white" />
+                    </div>
+                    <div className="flex-1">
+                      <h3 className="font-bold text-gray-900 dark:text-white text-lg mb-2">
+                        {tech.name}
+                      </h3>
+                      <div className="flex items-center space-x-3">
+                        <div className="flex-1 bg-gray-200 dark:bg-gray-700 rounded-full h-2.5 overflow-hidden">
+                          <motion.div
+                            initial={{ width: 0 }}
+                            animate={inView ? { width: `${tech.level}%` } : { width: 0 }}
+                            transition={{ duration: 1.2, delay: 1.2 + index * 0.05, ease: "easeOut" }}
+                            className={`h-full bg-gradient-to-r ${tech.color} rounded-full shadow-sm`}
+                          />
+                        </div>
+                        <span className={`text-sm font-semibold bg-gradient-to-r ${tech.color} bg-clip-text text-transparent`}>
+                          {tech.level}%
+                        </span>
                       </div>
-                      <span className={`text-sm font-semibold bg-gradient-to-r ${tech.color} bg-clip-text text-transparent`}>
-                        {tech.level}%
-                      </span>
                     </div>
                   </div>
-                </div>
 
-                {/* Description */}
-                <p className="text-sm text-gray-600 dark:text-gray-300 mb-4 leading-relaxed">
-                  {tech.description}
-                </p>
+                  {/* Description */}
+                  <p className="text-sm text-gray-600 dark:text-gray-300 mb-4 leading-relaxed">
+                    {tech.description}
+                  </p>
 
-                {/* Projects */}
-                <div className="space-y-2">
-                  <h4 className="text-xs font-semibold text-gray-500 dark:text-gray-400 uppercase tracking-wide">
-                    Proyectos destacados
-                  </h4>
-                  <div className="flex flex-wrap gap-2">
-                    {tech.projects.slice(0, 2).map((project, idx) => (
-                      <span
-                        key={idx}
-                        className="px-3 py-1 text-xs rounded-full bg-white/60 dark:bg-gray-800/60 text-gray-700 dark:text-gray-300 font-medium border border-gray-200/50 dark:border-gray-600/50 backdrop-blur-sm"
-                      >
-                        {project}
-                      </span>
-                    ))}
-                    {tech.projects.length > 2 && (
-                      <span className="px-3 py-1 text-xs rounded-full bg-gray-100/80 dark:bg-gray-700/80 text-gray-600 dark:text-gray-400 font-medium border border-gray-200/50 dark:border-gray-600/50">
-                        +{tech.projects.length - 2}
-                      </span>
-                    )}
+                  {/* Projects */}
+                  <div className="space-y-2">
+                    <h4 className="text-xs font-semibold text-gray-500 dark:text-gray-400 uppercase tracking-wide">
+                      Proyectos destacados
+                    </h4>
+                    <div className="flex flex-wrap gap-2">
+                      {tech.projects.slice(0, 2).map((project, idx) => (
+                        <span
+                          key={idx}
+                          className="px-3 py-1 text-xs rounded-full bg-white/60 dark:bg-gray-800/60 text-gray-700 dark:text-gray-300 font-medium border border-gray-200/50 dark:border-gray-600/50 backdrop-blur-sm"
+                        >
+                          {project}
+                        </span>
+                      ))}
+                      {tech.projects.length > 2 && (
+                        <span className="px-3 py-1 text-xs rounded-full bg-gray-100/80 dark:bg-gray-700/80 text-gray-600 dark:text-gray-400 font-medium border border-gray-200/50 dark:border-gray-600/50">
+                          +{tech.projects.length - 2}
+                        </span>
+                      )}
+                    </div>
                   </div>
-                </div>
 
-                {/* Hover effect overlay */}
-                <div className={`absolute inset-0 rounded-2xl bg-gradient-to-br ${tech.color} opacity-0 group-hover:opacity-5 transition-opacity duration-300 pointer-events-none`} />
-              </div>
-            </motion.div>
-          ))}
+                  {/* Hover effect overlay */}
+                  <div className={`absolute inset-0 rounded-2xl bg-gradient-to-br ${tech.color} opacity-0 group-hover:opacity-5 transition-opacity duration-300 pointer-events-none`} />
+                </div>
+              </motion.div>
+            ))}
+          </AnimatePresence>
         </motion.div>
+
+        {/* Show more / collapse buttons */}
+        {(hasMore || canCollapse) && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={inView ? { opacity: 1 } : { opacity: 0 }}
+            transition={{ duration: 0.4, delay: 0.3 }}
+            className="flex items-center justify-center gap-3 mt-10"
+          >
+            {hasMore && (
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                onClick={handleShowMore}
+                className="flex items-center gap-2 px-6 py-2.5 rounded-full bg-primary-600 hover:bg-primary-700 text-white font-medium text-sm shadow-lg transition-colors"
+              >
+                <ChevronDown className="w-4 h-4" />
+                Ver más
+                <span className="bg-white/20 text-white text-xs px-2 py-0.5 rounded-full">
+                  +{Math.min(ITEMS_PER_PAGE, filteredTechnologies.length - visibleCount)}
+                </span>
+              </motion.button>
+            )}
+            {canCollapse && (
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                onClick={handleCollapse}
+                className="flex items-center gap-2 px-6 py-2.5 rounded-full bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700 text-gray-700 dark:text-gray-300 font-medium text-sm transition-colors"
+              >
+                <ChevronUp className="w-4 h-4" />
+                Ver menos
+              </motion.button>
+            )}
+          </motion.div>
+        )}
+
+        {/* Progress indicator */}
+        <motion.p
+          initial={{ opacity: 0 }}
+          animate={inView ? { opacity: 1 } : { opacity: 0 }}
+          transition={{ duration: 0.4, delay: 0.4 }}
+          className="text-center text-xs text-gray-400 dark:text-gray-500 mt-4"
+        >
+          Mostrando {visibleTechnologies.length} de {filteredTechnologies.length} tecnologías
+        </motion.p>
       </motion.div>
     </section>
   );

@@ -2,13 +2,53 @@
 <html lang="es">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" href="/logodev.webp" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title> ELO | Portfolio</title>
-    <!-- Preconnect a recursos externos -->
+    <title>ELO | Portfolio</title>
+
+    <!-- Favicon e iconos -->
+    <link rel="icon" href="/logodev.webp" />
+    <link rel="apple-touch-icon" href="/logodev.webp" />
+    <meta name="theme-color" content="#0f172a" />
+
+    <!-- SEO básico -->
+    <meta name="author" content="Emanuel Londoño" />
+    <meta name="description" content="Portafolio personal de Emanuel Londoño, desarrollador con conocimientos sólidos de backend, frontend e IA, especializado en React, TypeScript y Tailwind CSS." />
+    <meta name="keywords" content="Emanuel Londoño, React, TypeScript, Tailwind CSS, Portafolio, Desarrollador Web, IA, Machine Learning" />
+    <meta name="robots" content="index, follow" />
+    <meta name="googlebot" content="index, follow" />
+    <meta name="bingbot" content="index, follow" />
+    <link rel="canonical" href="https://emanuel-londono.vercel.app" />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="ELO - Portafolio" />
+    <meta property="og:locale" content="es_ES" />
+    <meta property="og:url" content="https://emanuel-londono.vercel.app" />
+    <meta property="og:title" content="ELO - Portafolio | Emanuel Londoño" />
+    <meta property="og:description" content="Portafolio de Emanuel Londoño, desarrollador especializado en React, TypeScript, Tailwind CSS e IA. Explora mis proyectos y habilidades." />
+    <meta property="og:image" content="https://emanuel-londono.vercel.app/images/og-image.webp" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Emanuel Londoño - Portafolio de desarrollador web" />
+
+    <!-- Twitter / X -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@EmanuelLondono" />
+    <meta name="twitter:creator" content="@EmanuelLondono" />
+    <meta name="twitter:url" content="https://emanuel-londono.vercel.app" />
+    <meta name="twitter:title" content="ELO - Portafolio | Emanuel Londoño" />
+    <meta name="twitter:description" content="Portafolio de Emanuel Londoño, desarrollador especializado en React, TypeScript, Tailwind CSS e IA. Explora mis proyectos y habilidades." />
+    <meta name="twitter:image" content="https://emanuel-londono.vercel.app/images/og-image.webp" />
+
+    <!-- Rendimiento: preconnect a recursos externos -->
     <link rel="preconnect" href="https://cdn.jsdelivr.net" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link rel="preconnect" href="https://images.unsplash.com" />
+
+    <!-- Rendimiento: preload de assets críticos -->
+    <link rel="preload" href="/logodev.webp" as="image" type="image/webp" />
+    <link rel="preload" href="/images/og-image.webp" as="image" type="image/webp" />
   </head>
   <body>
     <div id="root"></div>
