@@ -115,7 +115,7 @@ export default function Projects() {
     },
     {
       id: 5,
-      title: 'Mercados Mi Punto',
+      title: 'Mercados Central',
       description: 'Aplicación web de e-commerce para productos frescos de alta calidad con funcionalidades avanzadas.',
       fullDescription: 'Una plataforma completa de comercio electrónico especializada en productos frescos. Incluye un sistema robusto de gestión de inventario, autenticación JWT, carrito persistente y un panel administrativo para la gestión completa del negocio.',
       images: [
@@ -128,8 +128,8 @@ export default function Projects() {
       tech: ['TypeScript', 'React', 'Node.js', 'SQLite', 'Express', 'JWT', 'Zustand'],
       category: 'ecommerce',
       links: {
-        demo: 'https://mercados-mipunto-project.vercel.app/',
-        github: 'https://github.com/Emanuel0428/mercados-mipunto-project',
+        demo: 'https://mercados-central.vercel.app/',
+        github: 'https://github.com/Emanuel0428/mercados-central',
       },
       features: [
         'Gestión completa de productos frescos',
