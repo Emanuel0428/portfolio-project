@@ -29,19 +29,19 @@ function App() {
   return (
     <ThemeProvider>
       <Helmet>
-        <title>ELO | Portfolio</title>
-        <meta name="description" content="Portafolio personal de Emanuel Londoño, especializado en React, TypeScript y Tailwind CSS." />
-        <meta property="og:title" content="ELO - Portafolio" />
-        <meta property="og:description" content="Explora mis proyectos y habilidades como desarrollador web." />
+        <title>Emanuel Londoño | Desarrollador Full Stack</title>
+        <meta name="description" content="Portafolio de Emanuel Londoño, Desarrollador Full Stack especializado en TypeScript y arquitecturas escalables. React, Next.js, Node.js, PostgreSQL y AWS." />
+        <meta property="og:title" content="Emanuel Londoño | Desarrollador Full Stack" />
+        <meta property="og:description" content="Desarrollador Full Stack especializado en TypeScript y arquitecturas escalables. Explora mi experiencia y proyectos." />
         <meta property="og:image" content="/images/og-image.webp" />
       </Helmet>
       <Layout>
         <Suspense fallback={<div className="text-center py-10">Cargando...</div>}>
           <Hero />
-          <Projects />
-          <About />
-          <Technologies />
           <Experience />
+          <Projects />
+          <Technologies />
+          <About />
           <Contact />
         </Suspense>
       </Layout>

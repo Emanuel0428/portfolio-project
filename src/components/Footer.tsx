@@ -14,13 +14,13 @@ export default function Footer() {
     },
     {
       icon: Linkedin,
-      href: 'https://linkedin.com/in/emanuel-londono',
+      href: 'https://www.linkedin.com/in/emanuel-l-835315174/',
       label: 'LinkedIn',
       color: 'hover:text-blue-600'
     },
     {
       icon: Mail,
-      href: 'mailto:emanuel.londono@example.com',
+      href: 'mailto:cod2877@gmail.com',
       label: 'Email',
       color: 'hover:text-primary-600'
     }
@@ -69,13 +69,13 @@ export default function Footer() {
                   Emanuel Londoño
                 </div>
                 <div className="text-sm text-gray-600 dark:text-gray-300">
-                  Full-Stack Dev
+                  Desarrollador Full Stack
                 </div>
               </div>
             </motion.div>
 
             <p className="text-gray-600 dark:text-gray-300 max-w-md mx-auto leading-relaxed">
-              Construyendo experiencias web excepcionales con pasión y dedicación
+              TypeScript · Arquitecturas escalables · Construyendo software con impacto medible
             </p>
           </div>
 
@@ -172,20 +172,20 @@ export default function Footer() {
             className="grid grid-cols-2 md:grid-cols-4 gap-6"
           >
             <div className="text-center">
-              <div className="text-2xl font-bold text-primary-600 dark:text-primary-400">∞</div>
-              <div className="text-xs text-gray-500 dark:text-gray-400">Ideas creativas</div>
+              <div className="text-2xl font-bold text-primary-600 dark:text-primary-400">10+</div>
+              <div className="text-xs text-gray-500 dark:text-gray-400">Proyectos completados</div>
             </div>
             <div className="text-center">
-              <div className="text-2xl font-bold text-primary-600 dark:text-primary-400">24/7</div>
-              <div className="text-xs text-gray-500 dark:text-gray-400">Disponibilidad</div>
+              <div className="text-2xl font-bold text-primary-600 dark:text-primary-400">35+</div>
+              <div className="text-xs text-gray-500 dark:text-gray-400">Repositorios en GitHub</div>
             </div>
             <div className="text-center">
-              <div className="text-2xl font-bold text-primary-600 dark:text-primary-400">100%</div>
-              <div className="text-xs text-gray-500 dark:text-gray-400">Dedicación</div>
+              <div className="text-2xl font-bold text-primary-600 dark:text-primary-400">50%</div>
+              <div className="text-xs text-gray-500 dark:text-gray-400">Mejoras de rendimiento</div>
             </div>
             <div className="text-center">
-              <div className="text-2xl font-bold text-primary-600 dark:text-primary-400">∞</div>
-              <div className="text-xs text-gray-500 dark:text-gray-400">Aprendizaje</div>
+              <div className="text-2xl font-bold text-primary-600 dark:text-primary-400">B2/C1</div>
+              <div className="text-xs text-gray-500 dark:text-gray-400">Inglés avanzado</div>
             </div>
           </motion.div>
         </motion.div>

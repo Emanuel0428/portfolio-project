@@ -32,6 +32,33 @@ export default function Projects() {
 
   const projects: Project[] = [
     {
+      id: 10,
+      title: 'Sistema de Conciliación Bancaria (DDD)',
+      description: 'Sistema fullstack para automatización de conciliación bancaria empresarial con Domain-Driven Design y Clean Architecture.',
+      fullDescription: 'Sistema fullstack para automatización de conciliación bancaria empresarial, con 4 Bounded Contexts documentados (Conciliación, Movimientos Bancarios, Movimientos Contables, Auditoría) y Glosario de Lenguaje Ubicuo. Backend en .NET 8 con Clean Architecture y frontend en Next.js 13+ con dashboard de métricas.',
+      images: [
+        'https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&q=80&w=800&h=600',
+        'https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=800&h=600',
+        'https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=800&h=600',
+        'https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&q=80&w=800&h=600',
+        'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&q=80&w=800&h=600'
+      ],
+      tech: ['TypeScript', 'C# (.NET 8)', 'Next.js', 'Entity Framework Core', 'SQL Server', 'DDD', 'CQRS'],
+      category: 'webapp',
+      links: {
+        github: 'https://github.com/Emanuel0428/Sistema-Conciliacion-BancariaDDD',
+      },
+      features: [
+        'Backend .NET 8 con Clean Architecture: Domain, Application (CQRS), Infrastructure y API REST',
+        'Modelado DDD táctico: Aggregates, Value Objects, Domain Events e interfaces de repositorio',
+        '4 Bounded Contexts documentados con Glosario de Lenguaje Ubicuo',
+        'Dashboard de métricas y wizard de conciliación en Next.js 13+',
+        'Emparejamiento automático y manual de transacciones',
+        'Flujo de aprobaciones y reportes con auditoría completa'
+      ],
+      status: 'completed'
+    },
+    {
       id: 2,
       title: 'All-in-One Fitness App V.1',
       description: 'Aplicación completa de fitness con tracking de ejercicios, planes personalizados y métricas de progreso.',

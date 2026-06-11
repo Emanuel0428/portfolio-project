@@ -10,6 +10,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@dano796/react-reart": "^0.1.2",
     "@emailjs/browser": "^4.4.1",
     "@midudev/tailwind-animations": "^0.2.0",
     "@tsparticles/engine": "^3.8.1",

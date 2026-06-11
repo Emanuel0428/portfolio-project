@@ -15,41 +15,46 @@ export default function Experience() {
 
   const experiences = [
     {
-      title: 'Desarrollador Full-Stack',
-      company: 'Proyectos Personales',
-      period: '2022 - Presente',
-      location: 'Medellín, Colombia',
-      type: 'Independiente',
-      description: 'Desarrollo de aplicaciones web completas desde el diseño hasta el deployment, enfocándome en tecnologías modernas y mejores prácticas.',
+      title: 'Desarrollador Full Stack & QA',
+      company: 'Nheo · SaaS',
+      period: 'May 2026 - Presente',
+      location: 'Remoto',
+      type: 'Startup',
+      description: 'Desarrollo y aseguramiento de calidad en plataforma multi-tenant SaaS para call centers, con infraestructura cloud en AWS.',
       achievements: [
-        'Desarrollo de FlowForgeAI - Plataforma de asistencia empresarial con ML',
-        'Outside Project - E-commerce completo con carrito y autenticación',
-        'Mercados Mi Punto - Sistema de gestión para supermercados',
-        'WebApp Restaurante - Aplicación completa para gestión de restaurantes',
-        'All in One Fitness App - Aplicación integral para seguimiento de fitness'
+        'Desarrollo del módulo de billing completo: lógica de facturación, integración con base de datos y cobertura de pruebas end-to-end',
+        'Implementación de suite de pruebas unitarias y automatizadas, garantizando estabilidad en arquitectura multi-tenant de alta criticidad',
+        'Responsable de revisión de Pull Requests con feedback técnico, asegurando estándares de calidad en todo el código base'
       ],
-      technologies: ['React', 'TypeScript', 'Node.js', 'Python', 'Supabase']
+      technologies: ['Next.js', 'Express', 'PostgreSQL', 'Docker Compose', 'AWS (EC2 + RDS)', 'CI/CD', 'GitHub Actions']
     },
     {
-      title: 'Estudiante de Ingeniería de Sistemas e Informática',
+      title: 'Desarrollador Full Stack Freelance',
+      company: 'Clínica Smiley · Sector salud',
+      period: 'Mar 2025 - Jul 2025',
+      location: 'Medellín, Colombia',
+      type: 'Freelance',
+      description: 'Desarrollo de plataforma web integral para gestión de citas médicas y administración interna de la clínica.',
+      achievements: [
+        'Diseño e implementación de aplicación web completa, reduciendo errores administrativos en un 45%',
+        'Desarrollo de API REST con autenticación JWT y validaciones robustas, aumentando la confirmación de citas en un 35%',
+        'Optimización de consultas en base de datos mediante indexación estratégica, logrando una mejora de velocidad del 50%'
+      ],
+      technologies: ['React 18', 'TypeScript', 'Node.js', 'PostgreSQL', 'JWT']
+    },
+    {
+      title: 'Ingeniería en Sistemas e Informática',
       company: 'Universidad Pontificia Bolivariana',
       period: '2023 - Presente',
-      location: 'Colombia',      type: 'Académico',
-      description: 'Formación académica integral en Ingeniería de Sistemas e Informática. Actualmente cursando 6to semestre con sólidos conocimientos en programación, matemáticas aplicadas, bases de datos, arquitectura de computadores y desarrollo de software.',
+      location: 'Medellín, Colombia',
+      type: 'Académico',
+      description: 'Formación en ingeniería de software con énfasis en arquitectura, bases de datos y desarrollo de aplicaciones. Complementada con Técnico en Sistemas del SENA (2019 - 2021).',
       achievements: [
-        'Dominio avanzado de algoritmos y estructuras de datos complejas',
+        'Diseño de arquitecturas: DDD, Clean Architecture, CQRS y principios SOLID',
         'Desarrollo de aplicaciones con bases de datos relacionales y NoSQL',
-        'Implementación de arquitecturas de software escalables y mantenibles',
-        'Diseño de patrones arquitectónicos: MVC, MVP, MVVM y Clean Architecture',
-        'Desarrollo de microservicios y arquitecturas distribuidas',
-        'Implementación de principios SOLID y patrones de diseño',
-        'Desarrollo de aplicaciones móviles nativas e híbridas',
-        'Gestión de proyectos de software con metodologías ágiles',
-        'Análisis y diseño de sistemas de información empresariales',
-        'Implementación de soluciones de inteligencia artificial básica',
-        'Proyectos colaborativos interdisciplinarios con equipos multifuncionales'
+        'Gestión de proyectos de software con metodologías ágiles'
       ],
-      technologies: ['Java', 'C#', 'Python', 'JavaScript', 'SQL', 'MongoDB', 'Android Studio', 'Machine Learning', 'Arquitectura de Software', 'Patrones de Diseño', 'Microservicios', 'Clean Architecture', 'Metodologías Ágiles']
+      technologies: ['Java', 'C#', 'Python', 'SQL', 'MongoDB', 'Arquitectura de Software']
     }
   ];
 
@@ -84,7 +89,7 @@ export default function Experience() {
             transition={{ duration: 0.6, delay: 0.4 }}
             className="text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto"
           >
-            Mi trayectoria en el desarrollo de software
+            De startup SaaS a proyectos freelance: mi trayectoria profesional en el desarrollo de software
           </motion.p>
         </div>
 

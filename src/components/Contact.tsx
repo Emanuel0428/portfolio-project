@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
-import { Mail, Github, Linkedin, Twitter, Send, MapPin, Phone } from 'lucide-react';
+import { Mail, Send, MapPin, Phone } from 'lucide-react';
 
 export default function Contact() {
   const [formData, setFormData] = useState({ name: '', email: '', message: '' });
@@ -35,37 +35,6 @@ export default function Contact() {
     const { name, value } = e.target;
     setFormData((prev) => ({ ...prev, [name]: value }));
   };
-
-  const socialLinks = [
-    { 
-      icon: Github, 
-      href: 'https://github.com/Emanuel0428', 
-      label: 'GitHub',
-      color: 'from-gray-600 to-gray-800',
-      hoverColor: 'hover:shadow-gray-500/25'
-    },
-    { 
-      icon: Linkedin, 
-      href: 'https://www.linkedin.com/in/emanuel-londo%C3%B1o-osorio-835315174/', 
-      label: 'LinkedIn',
-      color: 'from-blue-600 to-blue-700',
-      hoverColor: 'hover:shadow-blue-500/25'
-    },
-    { 
-      icon: Twitter, 
-      href: 'https://twitter.com', 
-      label: 'Twitter',
-      color: 'from-sky-400 to-blue-500',
-      hoverColor: 'hover:shadow-sky-500/25'
-    },
-    { 
-      icon: Mail, 
-      href: 'mailto:cod2877@gmail.com', 
-      label: 'Email',
-      color: 'from-red-500 to-red-600',
-      hoverColor: 'hover:shadow-red-500/25'
-    },
-  ];
 
   const contactInfo = [
     {

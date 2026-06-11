@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Menu, X, Sparkles, Code2, Home, User, Briefcase, Settings, Mail } from 'lucide-react';
+import { Menu, X, Sparkles, Code2, Home, User, Briefcase, Settings, Mail, FolderGit2 } from 'lucide-react';
 import ThemeToggle from './ThemeToggle';
 
 export default function Navbar() {
@@ -11,9 +11,10 @@ export default function Navbar() {
 
   const menuItems = [
     { id: 'inicio', label: 'Inicio', icon: Home },
-    { id: 'proyectos', label: 'Proyectos', icon: Briefcase },
-    { id: 'sobre-mí', label: 'Sobre Mí', icon: User },
+    { id: 'experiencia', label: 'Experiencia', icon: Briefcase },
+    { id: 'proyectos', label: 'Proyectos', icon: FolderGit2 },
     { id: 'tecnologías', label: 'Tecnologías', icon: Settings },
+    { id: 'sobre-mí', label: 'Sobre Mí', icon: User },
     { id: 'contacto', label: 'Contacto', icon: Mail },
   ];
 

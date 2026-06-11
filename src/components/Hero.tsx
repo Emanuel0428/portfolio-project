@@ -2,20 +2,13 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { TypeAnimation } from 'react-type-animation';
 import Particles from './Particles';
-import { ChevronDown, Code2, Github, MapPin } from 'lucide-react';
+import { ChevronDown, Code2, Github, MapPin, Mail } from 'lucide-react';
 
 export default function Hero() {
-  const scrollToProjects = () => {
-    const projectsSection = document.getElementById('proyectos');
-    if (projectsSection) {
-      projectsSection.scrollIntoView({ behavior: 'smooth' });
-    }
-  };
-
-  const scrollToNext = () => {
-    const aboutSection = document.getElementById('sobre-mí');
-    if (aboutSection) {
-      aboutSection.scrollIntoView({ behavior: 'smooth' });
+  const scrollToSection = (id: string) => {
+    const section = document.getElementById(id);
+    if (section) {
+      section.scrollIntoView({ behavior: 'smooth' });
     }
   };
 
@@ -33,8 +26,22 @@ export default function Hero() {
       </div>
       
       <div className="relative z-10 text-center max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+        {/* Availability badge */}
+        <motion.div
+          initial={{ opacity: 0, y: -10 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          className="inline-flex items-center gap-2 px-4 py-2 mb-8 rounded-full bg-white/10 dark:bg-gray-800/50 backdrop-blur-sm border border-white/20 dark:border-gray-700/50 text-sm text-gray-700 dark:text-gray-300"
+        >
+          <span className="relative flex h-2.5 w-2.5">
+            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75" />
+            <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-green-500" />
+          </span>
+          <span>Full Stack Developer & QA en <strong className="font-semibold">Nheo</strong></span>
+        </motion.div>
+
         {/* Name */}
-        <motion.h1 
+        <motion.h1
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
@@ -58,11 +65,13 @@ export default function Hero() {
         >
           <TypeAnimation
             sequence={[
-              'Computer Science Student',
+              'Desarrollador Full Stack',
               2000,
-              'Full-Stack Developer',
+              'Especialista en TypeScript',
               2000,
-              'AI & ML Enthusiast',
+              'Arquitecturas Escalables',
+              2000,
+              'QA & Testing',
               2000,
             ]}
             wrapper="span"
@@ -78,9 +87,9 @@ export default function Hero() {
           transition={{ duration: 0.6, delay: 0.6 }}
           className="text-lg md:text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto mb-12 leading-relaxed"
         >
-          Estudiante de Ingeniería en Sistemas e Informática apasionado por crear 
-          soluciones tecnológicas innovadoras con foco en desarrollo full-stack 
-          e inteligencia artificial.
+          Construyo aplicaciones web completas con mejoras medibles en rendimiento
+          y eficiencia. Me enfoco en backends robustos, sistemas bien diseñados y en
+          la integración de inteligencia artificial donde aporta valor real.
         </motion.p>
 
         {/* Action Buttons */}
@@ -93,13 +102,25 @@ export default function Hero() {
           <motion.button
             whileHover={{ scale: 1.05, y: -2 }}
             whileTap={{ scale: 0.95 }}
-            onClick={scrollToProjects}
+            onClick={() => scrollToSection('proyectos')}
             className="flex items-center space-x-2 px-8 py-4 bg-gradient-to-r from-primary-600 to-purple-600 text-white rounded-full font-medium text-lg
                      hover:from-primary-700 hover:to-purple-700 transform transition-all duration-300
                      shadow-[0_0_20px_rgba(168,85,247,0.4)] hover:shadow-[0_0_30px_rgba(168,85,247,0.6)]"
           >
             <Code2 className="w-5 h-5" />
             <span>Ver Proyectos</span>
+          </motion.button>
+
+          <motion.button
+            whileHover={{ scale: 1.05, y: -2 }}
+            whileTap={{ scale: 0.95 }}
+            onClick={() => scrollToSection('contacto')}
+            className="flex items-center space-x-2 px-8 py-4 bg-white/10 dark:bg-gray-800/50 text-gray-900 dark:text-white rounded-full font-medium text-lg
+                     hover:bg-white/20 dark:hover:bg-gray-700/50 transform transition-all duration-300
+                     backdrop-blur-sm border border-white/20 dark:border-gray-700/50"
+          >
+            <Mail className="w-5 h-5" />
+            <span>Contáctame</span>
           </motion.button>
 
           <motion.a
@@ -122,10 +143,16 @@ export default function Hero() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 1 }}
-          className="flex items-center justify-center space-x-2 text-gray-600 dark:text-gray-300 mb-16"
+          className="flex flex-wrap items-center justify-center gap-x-3 gap-y-1 text-gray-600 dark:text-gray-300 mb-16"
         >
-          <MapPin className="w-4 h-4" />
-          <span>Medellín, Colombia 🇨🇴</span>
+          <span className="flex items-center gap-1.5">
+            <MapPin className="w-4 h-4" />
+            <span>Medellín, Colombia 🇨🇴</span>
+          </span>
+          <span className="hidden sm:block w-1 h-1 rounded-full bg-gray-400" />
+          <span>Inglés avanzado B2/C1</span>
+          <span className="hidden sm:block w-1 h-1 rounded-full bg-gray-400" />
+          <span>Remoto / Híbrido</span>
         </motion.div>
 
         {/* Scroll Indicator */}
@@ -136,7 +163,7 @@ export default function Hero() {
           className="flex flex-col items-center"
         >
           <motion.button
-            onClick={scrollToNext}
+            onClick={() => scrollToSection('experiencia')}
             className="text-primary-600 dark:text-primary-400 hover:text-primary-700 dark:hover:text-primary-300 transition-colors"
           >
             <motion.div 

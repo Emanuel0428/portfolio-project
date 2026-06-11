@@ -16,13 +16,13 @@ export default function About() {
     },
     {
       icon: Users,
-      title: 'Trabajo Colaborativo',
-      description: 'Experiencia en equipos multidisciplinarios, metodologías ágiles y contribución activa a proyectos open source.'
+      title: 'Calidad como Cultura',
+      description: 'Pruebas unitarias y automatizadas, revisión rigurosa de PRs y CI/CD: la calidad del software no es opcional, es parte del proceso.'
     },
     {
       icon: GraduationCap,
-      title: 'Innovación Constante',
-      description: 'Combinando conocimientos académicos sólidos con exploración de tecnologías emergentes como IA y ML.'
+      title: 'Resultados Medibles',
+      description: 'Cada proyecto con impacto cuantificable: hasta 50% de mejora en rendimiento, 45% menos errores administrativos y sistemas más confiables.'
     }
   ];
 
@@ -74,24 +74,26 @@ export default function About() {
               <h3 className="text-2xl font-bold text-gray-900 dark:text-white">Mi Historia</h3>
             </div>              <div className="space-y-4 text-gray-600 dark:text-gray-300 leading-relaxed">
               <p>
-                Soy <strong>Emanuel Londoño</strong>, estudiante de 7to semestre de Ingeniería en Sistemas e Informática 
-                en la <strong>Universidad Pontificia Bolivariana</strong> de Medellín. Mi pasión por la tecnología 
-                me impulsa a crear soluciones innovadoras con impacto real.
+                Soy <strong>Emanuel Londoño</strong>, Desarrollador Full Stack especializado en
+                <strong> TypeScript y arquitecturas escalables</strong>. Actualmente trabajo en
+                <strong> Nheo</strong>, una startup SaaS, donde desarrollo el módulo
+                de billing y lidero el aseguramiento de calidad en una plataforma multi-tenant sobre AWS.
               </p>
               <p>
-                Mi trayectoria comenzó con curiosidad por entender cómo funcionan las aplicaciones diarias. 
-                Desde entonces, he evolucionado hacia el desarrollo full-stack, especializándome en 
-                <strong> React, TypeScript, Node.js y Python</strong>, con creciente interés en IA y machine learning.
+                Como freelance construí la plataforma de gestión de citas de <strong>Clínica Smiley</strong>,
+                logrando mejoras medibles: <strong>45% menos errores administrativos</strong> y consultas
+                hasta <strong>50% más rápidas</strong> mediante indexación estratégica.
               </p>
               <p>
-                Durante mi formación, he combinado fundamentos teóricos con proyectos prácticos, 
-                desarrollando desde <strong>sistemas de e-commerce completos</strong> hasta plataformas de 
-                inteligencia artificial como <strong>FlowForgeAI</strong>.
+                Estudio Ingeniería en Sistemas e Informática en la <strong>Universidad Pontificia
+                Bolivariana</strong> de Medellín, donde profundizo en <strong>DDD, Clean Architecture,
+                CQRS y principios SOLID</strong>, fundamentos que aplico en proyectos reales como mi
+                Sistema de Conciliación Bancaria.
               </p>
               <p>
-                Actualmente exploro las fronteras entre desarrollo web moderno e inteligencia artificial, 
-                integrando <strong>machine learning</strong> con interfaces intuitivas y experiencias 
-                digitales excepcionales.
+                Me enfoco en backends robustos, sistemas bien diseñados y en integrar
+                <strong> inteligencia artificial</strong> donde aporta valor real. Mi inglés avanzado
+                (B2/C1) me permite trabajar con equipos internacionales.
               </p>
             </div>
           </motion.div>
